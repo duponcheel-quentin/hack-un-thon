@@ -18,3 +18,9 @@
 
 </head>
 <body>
+<div class="card container mt-1" style="width: 14rem;">
+  <img class="card-img-top" src="../img/adep-logo-cut.png" alt="Logo adep">
+  <div class="card-body">
+    <p class="card-text text-center">Bienvenu sur le site de l'Adep.</p>
+  </div>
+</div>
