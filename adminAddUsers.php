@@ -1,7 +1,7 @@
 <?php
 require("template/header.php");
 ?>
-<form>
+<form class="mx-auto w-50 my-5">
     <div class="form-group">
         <label for="userName">Nom : </label>
         <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom">
