@@ -1,5 +1,6 @@
 <?php require "template/header.php"?>
 <?php require "model/db.php"?>
+<?php require "model/userManager.php"?>
 <div class="container text-center " >
 <h2>Bonjour "nom" liste emargement du "date"</h2>
 
