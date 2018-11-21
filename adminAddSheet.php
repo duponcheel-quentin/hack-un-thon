@@ -1,7 +1,7 @@
 <?php
 include("template/header.php");
 ?>
-<form class="mx-auto w-50 my-5" method="POST" action="UsersTreatment.php">
+<form class="mx-auto w-50 my-5">
     <div class="form-group">
         <label for="userName">Nom : </label>
         <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom">
@@ -46,8 +46,6 @@ include("template/header.php");
         <option>Autre</option>
         </select>
     </div>
-    <!--Envoie les données du formulaire, créer un message de succès ou d'erreur et renvoie sur la page d'accueil des admins-->
-    <button type="submit" class="btn btn-primary"><a href="admin.php">Envoyer</a></button>
 </form>
 <?php
 include("template/footer.php");
