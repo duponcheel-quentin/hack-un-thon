@@ -104,6 +104,22 @@ textarea {
     align-items: center;
 }
 
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container_button {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 .logo div {
     width: 10%;
     height: 10%;
@@ -127,7 +143,6 @@ footer a {
     display: flex;
     justify-content: center;
 }
-
 
 
 
