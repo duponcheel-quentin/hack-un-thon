@@ -24,3 +24,4 @@
     <p class="card-text text-center">Bienvenu sur le site de l'Adep.</p>
   </div>
 </div>
+<main>

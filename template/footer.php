@@ -1,3 +1,4 @@
+</main>
 <footer>
   <div class="copyright">
     <p><i class="fa fa-copyright" aria-hidden="true"> copyright 2018</i> - <a href="mentions légales">mentions légales</a></p>
