@@ -17,22 +17,25 @@
 </head>
 
 <body>
-  <section>
-    <h1>Page de connexion</h1>
-  <form>
-    <div class="form-group">
-      <label for="exampleInputName">Nom</label>
-      <input type="name" class="form-control" id="name" placeholder="Entrer votre nom">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Mot de passe</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Entrer votre mot de passe">
-    </div>
-    <div class="container_button">
-    <button type="submit" class="btn btn-primary">CONNEXION</button>
+
+<h2>Mes cours</h2>
+
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Matière
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Nom élève</a>
+    <a class="dropdown-item" href="#">Nom élève</a>
+    <a class="dropdown-item" href="#">Nom élève</a>
   </div>
-  </form>
-</section>
+</div>
+
+
+
+
+
 
 
 
