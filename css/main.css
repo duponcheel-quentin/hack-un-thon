@@ -96,13 +96,37 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+.logo div {
+    width: 10%;
+    height: 10%;
+    margin: 2em;
+}
 
+.logo img {
+    width: 50%;
+    height: 20%;
+}
 
+footer a {
+    color: black;
+    text-decoration: none;
+}
 
-
-
-
+.copyright {
+    width: 85%;
+    margin: auto;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
 
 
 
