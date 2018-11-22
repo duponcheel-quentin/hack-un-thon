@@ -1,6 +1,6 @@
 </main>
 <footer>
-  <div class="copyright fixed-bottom">
+  <div class="text-center">
     <p><i class="fa fa-copyright" aria-hidden="true"> copyright 2018</i> - <a href="mentions légales">mentions légales</a></p>
   </div>
 </footer>

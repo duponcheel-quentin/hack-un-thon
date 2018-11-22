@@ -1,7 +1,12 @@
 <?php
+// on démarre la session
+session_start();
+// oncharge le header
 require "template/header.php";
+// on se connecte à la base de données
 require "model/db.php";
  ?>
+ <!-- on ajoute notre formulaire -->
 <form class="container" method="post" action="feuilleTraitement.php">
   <div class="form-group row">
     <label for="Organisme" class="col-sm-2 col-form-label">Organisme</label>
@@ -87,7 +92,7 @@ require "model/db.php";
       </div>
       <div class="form-check disabled">
         <input class="form-check-input" type="radio" name="Vendredi_aprem" id="Vendredi_aprem" value="option">
-        <label class="form-check-label" for="gridRadios3">Vendredi après-midi</label>
+        <label class="form-check-label" for="Vendredi_aprem">Vendredi après-midi</label>
       </div>
     </div>
   </div>
@@ -98,6 +103,7 @@ require "model/db.php";
   </div>
 </div>
 </form>
+<!-- on charge le footer -->
 <?php
 require "template/footer.php";
  ?>
