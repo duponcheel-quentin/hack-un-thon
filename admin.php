@@ -41,7 +41,7 @@ include "template/header.php";
   <div class="card-body">
     <h5 class="card-title">Utilisateurs</h5>
     <h6 class="card-subtitle mb-2 text-muted">Créer/Modifier/Supprimer un utilisateur</h6>
-    <a href="#" class="card-link">Créer</a>
+    <a href="adminAddUsers" class="card-link">Créer</a>
     <a href="#" class="card-link">Modifier</a>
     <a href="#" class="card-link">Supprimer</a>
 
