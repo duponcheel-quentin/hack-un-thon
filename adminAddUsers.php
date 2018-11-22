@@ -1,26 +1,30 @@
 <?php
 include("template/header.php");
+
+require("model/db.php");
+session_start();
+
 ?>
 <form class="mx-auto w-50 my-5" method="POST" action="UsersTreatment.php">
     <div class="form-group">
         <label for="userName">Nom : </label>
-        <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom">
+        <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom" required="required">
     </div>
     <div class="form-group">
         <label for="userFirstname">Prénom : </label>
-        <input type="text" class="form-control" name="user_firstname" id="userFirstname" placeholder="prénom">
+        <input type="text" class="form-control" name="user_firstname" id="userFirstname" placeholder="prénom" required="required">
     </div>
     <div class="form-group">
         <label for="userStreet">Rue : </label>
-        <input type="text" class="form-control" name="user_street" id="userStreet" placeholder="rue">
+        <input type="text" class="form-control" name="user_street" id="userStreet" placeholder="rue" required="required">
     </div>
     <div class="form-group">
         <label for="userPostalcode">Code Postal : </label>
-        <input type="text" class="form-control" name="user_postalcode" id="userPostalcode" placeholder="code postal">
+        <input type="text" class="form-control" name="user_postalcode" id="userPostalcode" placeholder="code postal" required="required">
     </div>
     <div class="form-group">
         <label for="userCity">Ville : </label>
-        <input type="text" class="form-control" name="user_city" id="userCity" placeholder="ville">
+        <input type="text" class="form-control" name="user_city" id="userCity" placeholder="ville" required="required">
     </div>
     <div class="form-group">
         <label for="userJobID">Identifiant emploi : </label>
@@ -28,11 +32,19 @@ include("template/header.php");
     </div>
     <div class="form-group">
         <label for="userMail">Adresse mail : </label>
-        <input type="email" class="form-control" name="user_mail" id="userMail" placeholder="name@example.com">
+        <input type="email" class="form-control" name="user_mail" id="userMail" placeholder="name@example.com" required="required">
+    </div>
+    <div class="form-group">
+        <label for="userPassword">Mot de passe : </label>
+        <input type="password" class="form-control" name="user_password" id="userPassword" placeholder="mot de passe" required="required">
+    </div>
+    <div class="form-group">
+        <label for="userPasswordVerify">Vérification mot de passe : </label>
+        <input type="password" class="form-control" name="user_password2" id="userPasswordVerify" placeholder="mot de passe" required="required">
     </div>
     <div class="form-group">
         <label for="userStatus">Status : </label>
-        <select class="form-control" name="user_status" id="userStatus">
+        <select class="form-control" name="user_status" id="userStatus" required="required">
         <option>Admin</option>
         <option>Professeur</option>
         <option>Apprenant</option>
@@ -40,7 +52,7 @@ include("template/header.php");
     </div>
     <div class="form-group">
         <label for="userSexe">Sexe : </label>
-        <select class="form-control" name="user_sexe" id="userSexe">
+        <select class="form-control" name="user_sexe" id="userSexe" required="required">
         <option>Homme</option>
         <option>Femme</option>
         <option>Autre</option>

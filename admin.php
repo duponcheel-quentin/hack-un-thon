@@ -52,11 +52,20 @@ include "template/header.php";
 <div class="card text-white bg-warning mb-3" style="width: 20rem;">
   <div class="card-header">Utilisateurs</div>
   <div class="card-body">
+
     <p class="card-text">Créer, Modifier ou Supprimer un utilisateur.</p>
     <div class="d-flex justify-content-around">
     <button type="button" href="#" class="btn btn-light">Créer</button>
     <button type="button" href="#" class="btn btn-light">Modifier</button>
     <button type="button" href="#" class="btn btn-light">Supprimer</button>
+
+    <h5 class="card-title">Utilisateurs</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Créer/Modifier/Supprimer un utilisateur</h6>
+    <a href="adminAddUsers" class="card-link">Créer</a>
+    <a href="#" class="card-link">Modifier</a>
+    <a href="#" class="card-link">Supprimer</a>
+
+
   </div>
   </div>
 </div>

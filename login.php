@@ -4,7 +4,6 @@ require "model/db.php";
 
 $reponses = $bdd->query('SELECT * FROM Users');
 $reponse = $reponses->fetchall();
-var_dump($reponse);
 //On vérifie si le formulaire a été rempli
 if(!empty($_POST)) {
   //On nettoie les entrées du formulaire
@@ -12,27 +11,26 @@ if(!empty($_POST)) {
     $_POST[$key] = htmlspecialchars($value);
   }
   //On récupère les utilisateurs stockés
-  foreach ($reponse as $key =>$user ) {
+  foreach ($reponse as $key =>$user) {
     if($user["Nom"] === $_POST["Name"] && $_POST["Password"] === $user["Password"]) {
       //On démarre une session pour y stocker les informations de l'utilisateur
       session_start();
       $_SESSION["user"] = $user;
       if ($_SESSION["user"]["Status"] === "Admin") {
-      header("Location: admin.php");
-      exit;
+        header("Location: admin.php");
+        exit;
       }
       if ($_SESSION["user"]["Status"] === "Teacher"){
         header("Location: teacher.php");
-        //On arrête l'execution du script
         exit;
       }
     }
   }
-  header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
+  // header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
   exit;
 }
 //Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
-  // header("Location: index.php?message=Vous devez remplir les champs du formulaire");
+  header("Location: index.php?message=Vous devez remplir les champs du formulaire");
   exit;
 
  ?>
