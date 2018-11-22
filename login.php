@@ -1,7 +1,7 @@
 <?php
 //On charge le fichier avec les fonctions qui renvoient nos données
 require "model/db.php";
-var_dump($_POST);
+
 $reponses = $bdd->query('SELECT * FROM Users');
 $reponse = $reponses->fetchall();
 var_dump($reponse);

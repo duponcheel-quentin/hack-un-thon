@@ -2,52 +2,70 @@
 include "template/header.php";
 ?>
 <!--
-~~~~~~~~~| catégories |~~~~~~~~
+~~~~~~~~~| CATEGORIES |~~~~~~~~
 -->
-
-<div class="card row">
-<div class="card col-sm-12 col-md-5">
+<div class="container mt-5">
+<div class="row">
+  <div class=" col-12 col-sm-12 col-md-6 ">
+<div class="card text-white bg-primary mb-3" style="width: 20rem;">
+  <div class="card-header">Catégories</div>
   <div class="card-body">
-    <h5 class="card-title">Catégorie</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Créer/Supprimer des catégories</h6>
-    <a href="#" class="card-link">Créer</a>
-    <a href="#" class="card-link">Supprimer</a>
+    <p class="card-text">Créer ou Supprimer des catégories.</p>
+    <div class="d-flex justify-content-around">
+    <button type="button" href="#" class="btn btn-light">Créer</button>
+    <button type="button" href="#" class="btn btn-light">Supprimer</button>
   </div>
+  </div>
+</div>
 </div>
 <!--
-~~~~~~~~~ | feuilles |~~~~~~~~~~
+~~~~~~~~~~~~~~| FEUILLES |~~~~~~~~~~~~~~
 -->
-<div class="card">
-  <div class="card-body  col-sm-12 col-md-5">
-    <h5 class="card-title">Feuilles</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Créer/Modifier une feuille d'emargement</h6>
-    <a href="#" class="card-link">Créer</a>
-    <a href="#" class="card-link">Modifier</a>
+<div class="col-12 col-sm-12 col-md-6 d-flex justify-content-end">
+<div class="card text-white bg-danger mb-3" style="width: 20rem;">
+  <div class="card-header">Feuilles</div>
+  <div class="card-body">
+    <p class="card-text">Consuter les feuilles d'émargements.</p>
+    <div class="d-flex justify-content-around">
+    <button type="button" href="#" class="btn btn-light">Voir</button>
+  </div>
   </div>
 </div>
-
-<div class="card">
-  <div class="card-body  col-sm-12 col-md-5">
-    <h5 class="card-title">Feuilles</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Consulter</h6>
-    <a href="#" class="card-link">Voir feuille</a>
+</div>
+<div class="col-12 col-sm-12 col-md-6">
+<div class="card text-white bg-success mb-3" style="width: 20rem;">
+  <div class="card-header">Feuilles</div>
+  <div class="card-body">
+    <p class="card-text">Créer ou Modifier une feuille d'emargement.</p>
+    <div class="d-flex justify-content-around">
+    <button type="button" href="#" class="btn btn-light">Créer</button>
+    <button type="button" href="#" class="btn btn-light">Modifier</button>
   </div>
+  </div>
+</div>
 </div>
 
 <!--
-~~~~~~~~~ | Utilisateurs | ~~~~~~~~~
+~~~~~~~~~~~~~~~| UTILISATEURS |~~~~~~~~~~
 -->
-<div class="card col-sm-12 col-md-6">
+<div class="col-12 col-sm-12 col-md-6 d-flex justify-content-end">
+<div class="card text-white bg-warning mb-3" style="width: 20rem;">
+  <div class="card-header">Utilisateurs</div>
   <div class="card-body">
-    <h5 class="card-title">Utilisateurs</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Créer/Modifier/Supprimer un utilisateur</h6>
-    <a href="#" class="card-link">Créer</a>
-    <a href="#" class="card-link">Modifier</a>
-    <a href="#" class="card-link">Supprimer</a>
-
+    <p class="card-text">Créer, Modifier ou Supprimer un utilisateur.</p>
+    <div class="d-flex justify-content-around">
+    <button type="button" href="#" class="btn btn-light">Créer</button>
+    <button type="button" href="#" class="btn btn-light">Modifier</button>
+    <button type="button" href="#" class="btn btn-light">Supprimer</button>
+  </div>
   </div>
 </div>
 </div>
+</div>
+</div>
+
+
+
 
 
 <?php
