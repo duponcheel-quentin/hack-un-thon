@@ -17,7 +17,7 @@ if(!empty($_POST) || isset($_POST)) {
             addUser($_POST, $bdd);
             //Fin du programme, je redirige avec un message
             header("Location: admin.php?message=L'utilisateur a bien été ajouté");
-            exit; 
+            exit;
         }
         else {
             header("Location: adminAddUsers.php?message=Le mot de passe et sa confirmation ne correspondent pas!");
