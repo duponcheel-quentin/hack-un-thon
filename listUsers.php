@@ -22,8 +22,6 @@ $users = $query->fetchall(PDO::FETCH_ASSOC);
 <!--Ce sont les boutons ajouter, modifier et supprimer un utilisateur-->
 <div class="w-50 mx-auto">
   <a class="btn btn-success" href="adminAddUsers.php" role="button">Ajouter</a>
-  <a class="btn btn-primary" href="#" role="button">Modifier</a>
-  <a class="btn btn-danger" href="#" role="button">Supprimer</a>
 </div>
 
 <?php
@@ -31,8 +29,11 @@ foreach($users as $key => $user) {
 ?>
 
 <!--C'est la liste des utilisateurs du site-->
-<ul class="list-group w-50 mx-auto my-5">
-  <li class="list-group-item"><?php echo $user["Nom"] . " " . $user["Prenom"]; ?></li>
+<ul class="list-group w-50 mx-auto my-2">
+  <li class="list-group-item"><?php echo $user["Nom"] . " " . $user["Prenom"]; ?>
+  <a class="btn btn-primary btn-sm" href="#" role="button">Modifier</a>
+  <a class="btn btn-danger btn-sm" href="#" role="button">Supprimer</a>
+  </li>
 </ul>
 <?php
 }

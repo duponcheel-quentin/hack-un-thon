@@ -59,7 +59,7 @@ session_start();
         </select>
     </div>
     <!--Envoie les données du formulaire, créer un message de succès ou d'erreur et renvoie sur la page d'accueil des admins-->
-    <button type="submit" class="btn btn-primary"><a href="admin.php">Envoyer</a></button>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
 <?php
 include("template/footer.php");

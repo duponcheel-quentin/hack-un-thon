@@ -36,9 +36,9 @@ function updateUser($user, $bdd) {
     return $query;
 }
 //function that removes the user
-function deleteUser($user, $bdd) {
-    $query = $bdd->prepare("DELETE FROM Users WHERE Users_ID = ?");
-    $query->execute(["Users_ID" => $user[""]]);
+function deleteUser($id, $db) {
+    $query = $db->prepare("DELETE FROM Users WHERE Users_ID = ?");
+    $query->execute([$id]);
     return $query;
 }
 ?>
