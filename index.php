@@ -1,3 +1,5 @@
+<?php require "template/header.php";?>
+
 <body>
   <section>
     <h1>Page de connexion</h1>
@@ -15,3 +17,4 @@
     </div>
   </form>
 </section>
+<?php require "template/footer.php";?>

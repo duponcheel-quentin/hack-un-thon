@@ -1,9 +1,9 @@
 <?php require "template/header.php";?>
 <?php require "model/db.php";?>
-<?php require "model/userManager.php";?>
+<?php require "model/usersManagement.php";?>
 <?php session_start();?>
 <div class="container text-center">
-<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du <?php echo $_SESSION["user"]["Cours"]["Date"];?> </h2>
+<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du <?php $date = date("d-m-Y"); $heure = date("H:i"); Print("$date à $heure");?>	  </h2>
 </div>
 
 <h2>Mes cours</h2>
