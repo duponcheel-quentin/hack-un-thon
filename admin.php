@@ -58,14 +58,6 @@ include "template/header.php";
     <button type="button" href="#" class="btn btn-light">Créer</button>
     <button type="button" href="#" class="btn btn-light">Modifier</button>
     <button type="button" href="#" class="btn btn-light">Supprimer</button>
-
-    <h5 class="card-title">Utilisateurs</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Créer/Modifier/Supprimer un utilisateur</h6>
-    <a href="adminAddUsers" class="card-link">Créer</a>
-    <a href="#" class="card-link">Modifier</a>
-    <a href="#" class="card-link">Supprimer</a>
-
-
   </div>
   </div>
 </div>
