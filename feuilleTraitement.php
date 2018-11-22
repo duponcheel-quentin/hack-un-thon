@@ -1,9 +1,13 @@
 <?php
-//On charge les fonctions de gestion des données
+//On charge la connexion
 require "model/db.php";
+//On charge le fichier qui contien les fonctions
 require "model/feuilleManager.php";
+// on démarre une session
+session_start();
+// on fait appel à la fonction qui restrint l'accés aux admin
 restrictToAdmin();
-
+// on verifie que les entrées de notre formulaire ne soient pas vides
 if(!empty($_POST)) {
   //On sécurise les entrées du formulaire .
   foreach ($_POST as $key => $value) {
@@ -11,7 +15,7 @@ if(!empty($_POST)) {
   }
 
   if(addFeuille($_POST, $db)) {
-    header("Location: admin.php?success=Votre produit a bien été ajouté au catalogue");
+    header("Location: admin.php?success=Votre feuille a bien été ajoutée à la base de données");
     exit;
   }
   else {
@@ -24,6 +28,6 @@ else {
   exit;
 }
 
- ?>
+?>
 
- ?>
+?>

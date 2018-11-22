@@ -55,43 +55,43 @@ require "model/db.php";
     <legend class="col-form-label col-sm-2 pt-0">Date du cours</legend>
     <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Lundi_matin" id="Lundi_matin" value="option1">
+        <input class="form-check-input" type="radio" name="Lundi_matin" id="Lundi_matin" value="Lundi_matin">
         <label class="form-check-label" for="Lundi_matin">Lundi matin</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Lundi_aprem" id="Lundi_aprem" value="option1">
+        <input class="form-check-input" type="radio" name="Lundi_aprem" id="Lundi_aprem" value="Lundi_aprem">
         <label class="form-check-label" for="Lundi_aprem">Lundi après-midi</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Mardi_matin" id="Mardi_matin" value="option1">
+        <input class="form-check-input" type="radio" name="Mardi_matin" id="Mardi_matin" value="Mardi_matin">
         <label class="form-check-label" for="Mardi_matin">Mardi matin</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Manrdi_aprem" id="Manrdi_aprem" value="option1">
+        <input class="form-check-input" type="radio" name="Manrdi_aprem" id="Manrdi_aprem" value="Manrdi_aprem">
         <label class="form-check-label" for="Manrdi_aprem">Mardi après-midi</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Mercredi_matin" id="Mercredi_matin" value="option1">
+        <input class="form-check-input" type="radio" name="Mercredi_matin" id="Mercredi_matin" value="Mercredi_matin">
         <label class="form-check-label" for="Mercredi_matin">Mercredi matin</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Mercredi_aprem" id="Mercredi_aprem" value="option1">
+        <input class="form-check-input" type="radio" name="Mercredi_aprem" id="Mercredi_aprem" value="Mercredi_aprem">
         <label class="form-check-label" for="Mercredi_aprem">Mercredi après-midi</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Jeudi_aprem" id="Jeudi_aprem" value="option1">
+        <input class="form-check-input" type="radio" name="Jeudi_aprem" id="Jeudi_aprem" value="Jeudi_aprem">
         <label class="form-check-label" for="gridRadios1">Jeudi matin</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="Jeudi_matin" id="Jeudi_matin" value="option1">
+        <input class="form-check-input" type="radio" name="Jeudi_matin" id="Jeudi_matin" value="Jeudi_matin">
         <label class="form-check-label" for="gridRadios1">Jeudi après-midi</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="vendredi_matin" id="vendredi_matin" value="option">
+        <input class="form-check-input" type="radio" name="vendredi_matin" id="vendredi_matin" value="vendredi_matin">
         <label class="form-check-label" for="vendredi_matin">Vendredi matin</label>
       </div>
       <div class="form-check disabled">
-        <input class="form-check-input" type="radio" name="Vendredi_aprem" id="Vendredi_aprem" value="option">
+        <input class="form-check-input" type="radio" name="Vendredi_aprem" id="Vendredi_aprem" value="Vendredi_aprem">
         <label class="form-check-label" for="Vendredi_aprem">Vendredi après-midi</label>
       </div>
     </div>
