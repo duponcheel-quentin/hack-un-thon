@@ -1,7 +1,9 @@
 <?php
 include("template/header.php");
+
 require("model/db.php");
 session_start();
+
 ?>
 <form class="mx-auto w-50 my-5" method="POST" action="UsersTreatment.php">
     <div class="form-group">
