@@ -7,20 +7,20 @@ require "template/header.php";
 require "model/db.php";
 ?>
 <!-- on ajoute notre formulaire -->
-<form class="mx-auto w-50 my-5" method="post" action="feuilleTraitement.php">
-  <div class="form-group row">
+<form class="mx-auto w-50 my-5 container" method="post" action="feuilleTraitementAdd.php">
+  <div class="form-group">
     <label for="Organisme" class="col-sm-2 col-form-label">Organisme</label>
     <input type="text" class="form-control" id="Organisme" name="Organisme" placeholder="Organisme">
   </div>
-  <div class="form-group row">
+  <div class="form-group">
     <label for="Intitule" class="col-sm-2 col-form-label">Matière</label>
     <input type="text" class="form-control" id="Intitule" name="Intitule" placeholder="Intitule">
   </div>
-  <div>
+  <div class="form-group">
     <label for="Debut">Date de début :</label>
     <input type="date" id="Debut" name="Debut" min="2018-01-10" max="3000-04-30">
   </div>
-  <div>
+  <div class="form-group">
     <label for="Fin">Date de fin:</label>
     <input type="date" id="Fin" name="Fin" min="2018-01-10" max="3000-04-30">
   </div>

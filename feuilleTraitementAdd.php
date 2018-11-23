@@ -18,7 +18,7 @@ if(!empty($_POST)) {
   }
 
 else {
-  header("Location: feuille.php?message=Votre feuille n'a pas été crée.");
+  header("Location: feuilleAdd.php?message=Votre feuille n'a pas été crée.");
   exit;
 }
  ?>
