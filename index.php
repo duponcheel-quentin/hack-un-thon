@@ -1,3 +1,5 @@
+<?php require "template/header.php";?>
+
 <body>
   <?php
   include "template/header.php";
@@ -19,3 +21,4 @@
     </div>
   </form>
 </section>
+<?php require "template/footer.php";?>

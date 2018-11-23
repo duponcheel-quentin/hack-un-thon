@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Hack-un-thon</title>
   <meta name="description" content="L'application d'emargement de l'ADEP">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,8 +18,8 @@
 
 </head>
 <body>
-<div class="card container mt-1" style="width: 14rem;">
-  <img class="card-img-top" src="img/adep-logo-cut.png" alt="Logo adep">
+<div class="d-flex justify-content-end"><a href="logout.php">Bouton déconnexion</a></div>
+  <img class="card-img-top w-25 container d-flex" src="img/adep-logo-cut.png" alt="Logo adep">
   <div class="card-body">
     <p class="card-text text-center">Bienvenu sur le site de l'Adep.</p>
   </div>
