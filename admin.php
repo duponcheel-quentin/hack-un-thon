@@ -1,13 +1,15 @@
 <?php
 include "template/header.php";
 ?>
+
+
 <!--
 ~~~~~~~~~| CATEGORIES |~~~~~~~~
 -->
 <div class="container mt-5">
 <div class="row">
-  <div class=" col-12 col-sm-12 col-md-6 ">
-<div class="card text-white bg-primary mb-3" style="width: 20rem;">
+  <div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-start">
+<div class="card text-white bg-primary mb-3" style="width: 20rem">
   <div class="card-header">Catégories</div>
   <div class="card-body">
     <p class="card-text">Créer ou Supprimer des catégories.</p>
@@ -21,8 +23,8 @@ include "template/header.php";
 <!--
 ~~~~~~~~~~~~~~| FEUILLES |~~~~~~~~~~~~~~
 -->
-<div class="col-12 col-sm-12 col-md-6 d-flex justify-content-end">
-<div class="card text-white bg-danger mb-3" style="width: 20rem;">
+<div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-end">
+<div class="card text-white bg-danger mb-3" style="width: 20rem">
   <div class="card-header">Feuilles</div>
   <div class="card-body">
     <p class="card-text">Consuter les feuilles d'émargements.</p>
@@ -32,8 +34,8 @@ include "template/header.php";
   </div>
 </div>
 </div>
-<div class="col-12 col-sm-12 col-md-6">
-<div class="card text-white bg-success mb-3" style="width: 20rem;">
+<div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-start">
+<div class="card text-white bg-success mb-3" style="width: 20rem">
   <div class="card-header">Feuilles</div>
   <div class="card-body">
     <p class="card-text">Créer ou Modifier une feuille d'emargement.</p>
@@ -48,8 +50,8 @@ include "template/header.php";
 <!--
 ~~~~~~~~~~~~~~~| UTILISATEURS |~~~~~~~~~~
 -->
-<div class="col-12 col-sm-12 col-md-6 d-flex justify-content-end">
-<div class="card text-white bg-warning mb-3" style="width: 20rem;">
+<div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-end">
+<div class="card text-white bg-warning mb-3" style="width: 20rem">
   <div class="card-header">Utilisateurs</div>
   <div class="card-body">
 
