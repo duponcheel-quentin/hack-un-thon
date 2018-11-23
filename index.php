@@ -2,7 +2,6 @@
   <?php
   include "template/header.php";
   ?>
-
   <section  class="d-flex justify-content-center">
     <h1>Page de connexion</h1>
   <form method="post" action="login.php">
