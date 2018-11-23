@@ -16,7 +16,7 @@ restrictToAdmin();
         <div class="card-body">
           <p class="card-text">Créer ou Supprimer des catégories.</p>
           <div class="d-flex justify-content-around">
-            <button type="button" href="#" class="btn btn-light">Créer</button>
+            <button type="button" href="categories.php" class="btn btn-light">Créer</button>
             <button type="button" href="#" class="btn btn-light">Supprimer</button>
           </div>
         </div>
