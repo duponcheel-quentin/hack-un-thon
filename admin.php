@@ -4,8 +4,6 @@ require "service/sessionManager.php";
 //On restreint l'accès de la page aux utilisateurs enregistrés
 restrictToAdmin();?>
 
-?>
-
 <!--
 ~~~~~~~~~| CATEGORIES |~~~~~~~~
 -->
@@ -60,9 +58,9 @@ restrictToAdmin();?>
         <div class="card-body">
           <p class="card-text">Créer, Modifier ou Supprimer un utilisateur.</p>
           <div class="d-flex justify-content-around">
-            <button type="button" href="#" class="btn btn-light">Créer</button>
-            <button type="button" href="#" class="btn btn-light">Modifier</button>
-            <button type="button" href="#" class="btn btn-light">Supprimer</button>
+            <a href="adminAddUsers.php"><button type="button" class="btn btn-light">Ajouter</button></a>
+            <a href="listUsers.php"><button type="button" href="listUsers.php" class="btn btn-light">Modifier</button></a>
+            <a href="listUsers.php"><button type="button" href="listUsers.php" class="btn btn-light">Supprimer</button></a>
           </div>
         </div>
     </div>

@@ -1,4 +1,10 @@
 <?php 
+//Récupère les données d'un utilisateur
+function getUser($db, $id) {
+    $query = $db->prepare("SELECT * FROM Users WHERE Users_ID = ?");
+    $result = $query->execute([$id]);
+    return $result;
+}
 //function that adds the user
 function addUser($user, $db) {
     $query = $db->prepare("INSERT INTO Users (Status, Nom, Prenom, Password, Password_verif, Adresse_mail, Rue, Ville, Code_postal, Identifiant_emploi, Sexe) VALUES(:Status, :Nom, :Prenom, :Password, :Password_verif, :Adresse_mail, :Rue, :Ville, :Code_postal, :Identifiant_emploi, :Sexe)");
@@ -42,8 +48,8 @@ function deleteUser($id, $db) {
     return $query;
 }
 
-function day($bdd) {
-    $query = $bdd->prepare("SELECT * FROM Cours");
+function day($db) {
+    $query = $db->prepare("SELECT * FROM Cours");
     $query->execute(["Date" => $user["Date"]]);    
     return $query;
 }

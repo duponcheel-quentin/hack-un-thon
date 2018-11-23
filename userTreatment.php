@@ -11,17 +11,11 @@ if(!empty($_POST) || isset($_POST) && $_POST["button"] === "Envoyer") {
     foreach($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
     }
-    foreach($users as $key => $user) {
-        if($_POST["user_password"] === $_POST["user_password2"]) {
+    
             addUser($_POST, $db);
             //Fin du programme, je redirige avec un message
             header("Location: admin.php?message=L'utilisateur a bien été ajouté");
             exit; 
-        }
-        else {
-            header("Location: adminAddUsers.php?message=Le mot de passe et sa confirmation ne correspondent pas!");
-        }
-    }
 }
 else {
     header("Location: adminAddUsers.php?message=Le formulaire n'est pas remplis correctement!");
