@@ -25,17 +25,31 @@ restrictToAdmin();
 <!--
 ~~~~~~~~~~~~~~| FEUILLES |~~~~~~~~~~~~~~
 -->
-  <div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-end">
-      <div class="card text-white bg-danger mb-3" style="width: 20rem">
-        <div class="card-header">Feuilles</div>
-          <div class="card-body">
-            <p class="card-text">Consuter les feuilles d'émargements.</p>
-            <div class="d-flex justify-content-around">
-              <button type="button" href="#" class="btn btn-light">Voir</button>
-            </div>
-          </div>
-      </div>
+<div class="col-12 col-sm-12 col-md-6 d-flex justify-content-end">
+<div class="card text-white bg-danger mb-3" style="width: 20rem;">
+  <div class="card-header">Feuilles</div>
+  <div class="card-body">
+    <p class="card-text">Consuter les feuilles d'émargements.</p>
+    <div class="d-flex justify-content-around">
+    <button type="button" href="viewFeuille.php" class="btn btn-light">Voir</button>
   </div>
+  </div>
+</div>
+</div>
+<div class="col-12 col-sm-12 col-md-6">
+<div class="card text-white bg-success mb-3" style="width: 20rem;">
+  <div class="card-header">Feuilles</div>
+  <div class="card-body">
+    <p class="card-text">Créer ou Modifier une feuille d'emargement.</p>
+    <div class="d-flex justify-content-around">
+    <a href="feuilleAdd.php"><button type="button" class="btn btn-light">Créer</button></a>
+    <a href="feuilleUpdate.php"><button type="button" class="btn btn-light">Modifier</button></a>
+    <a href="feuilleDel.php" ><button type="button" class="btn btn-light">Supprimer</button></a>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
 
   <div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-start">
     <div class="card text-white bg-success mb-3" style="width: 20rem">

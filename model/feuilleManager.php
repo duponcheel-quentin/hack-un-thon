@@ -6,7 +6,7 @@
   return $feuilles;
 }
   //Fonction qui récupère une seule feuille de la DB sur la base de son id
-function getProduct($id, $db) {
+function getFeuille($id, $db) {
   $query = $db->prepare("SELECT * FROM Feuille WHERE id=?");
   $query->execute([$id]);
   $feuille = $query->fetch(PDO::FETCH_ASSOC);
@@ -14,43 +14,43 @@ function getProduct($id, $db) {
 }
 //Fonction qui ajoute une feuille en DB
 function addFeuille($feuille, $db) {
-  $query = $db->prepare("INSERT INTO Feuille (Organisme, Intitule, Debut, Fin, Lundi_matin, Lundi_aprem, Mardi_matin, Mardi_aprem, Mercredi_matin, Mercredi_aprem, Jeudi_matin, Jeudi_aprem, Vendredi_matin, Vendredi_aprem) VALUES(:organisme, :Intitule, :Debut, :Fin, :Lundi_matin, :Lundi_aprem, :Mardi_matin, :Mardi_aprem, :Mercredi_matin, :Mercredi_aprem, :Jeudi_matin, :Jeudi_aprem, :Vendredi_matin, :Vendredi_aprem)");
+  $query = $db->prepare("INSERT INTO Feuille (Organisme, Intitule, Debut, Fin, Lundi_matin, Lundi_aprem, Mardi_matin, Mardi_aprem, Mercredi_matin, Mercredi_aprem, Jeudi_matin, Jeudi_aprem, Vendredi_matin, Vendredi_aprem) VALUES (:Organisme, :Intitule, :Debut, :Fin, :Lundi_matin, :Lundi_aprem, :Mardi_matin, :Mardi_aprem, :Mercredi_matin, :Mercredi_aprem, :Jeudi_matin, :Jeudi_aprem, :Vendredi_matin, :Vendredi_aprem)");
   $result = $query->execute([
-    "Organisme" => $product["Organisme"] ,
-    "Intitule" => $product["Intitule"],
-    "Debut" => $product["Debut"],
-    "Fin" => $product["Fin"],
-    "Lundi_matin" => $product["Lundi_matin"],
-    "Lundi_aprem" => $product["Lundi_aprem"],
-    "Mardi_matin" => $product["Mardi_matin"],
-    "Mardi_aprem" => $product["Mardi_aprem"],
-    "Mercredi_matin" => $product["Mercredi_matin"],
-    "Mercredi_aprem" => $product["Mercredi_aprem"],
-    "Jeudi_matin" => $product["Jeudi_matin"],
-    "Jeudi_aprem" => $product["Jeudi_aprem"],
-    "Vendredi_matin" => $product["Vendredi_matin"],
-    "Vendredi_aprem" => $product["Vendredi_aprem"],
+    "Organisme" => $feuille["Organisme"] ,
+    "Intitule" => $feuille["Intitule"],
+    "Debut" => $feuille["Debut"],
+    "Fin" => $feuille["Fin"],
+    "Lundi_matin" => $feuille["Lundi_matin"],
+    "Lundi_aprem" => $feuille["Lundi_aprem"],
+    "Mardi_matin" => $feuille["Mardi_matin"],
+    "Mardi_aprem" => $feuille["Mardi_aprem"],
+    "Mercredi_matin" => $feuille["Mercredi_matin"],
+    "Mercredi_aprem" => $feuille["Mercredi_aprem"],
+    "Jeudi_matin" => $feuille["Jeudi_matin"],
+    "Jeudi_aprem" => $feuille["Jeudi_aprem"],
+    "Vendredi_matin" => $feuille["Vendredi_matin"],
+    "Vendredi_aprem" => $feuille["Vendredi_aprem"]
   ]);
   return $result;
 }
 //Fonction qui update une feuille en DB
-function addFeuille($feuille, $db) {
+function updateFeuille($feuille, $db) {
   $query = $db->prepare("UPDATE Feuille SET Organisme = :Organisme, Intitule = :Intitule, Debut = :Debut, Fin = :Fin, Lundi_matin = :Lundi_matin, Lundi_aprem = :Lundi_aprem, Mardi_matin = :Mardi_matin, Mardi_aprem = :Mardi_aprem, Mercredi_matin = :Mercredi_matin, Mercredi_aprem = :Mercredi_aprem, Jeudi_matin = :Jeudi_matin, Jeudi_aprem = :Jeudi_aprem, Vendredi_matin = :Vendredi_matin, Vendredi_aprem = :Vendredi_aprem)");
   $result = $query->execute([
-    "Organisme" => $product["Organisme"] ,
-    "Intitule" => $product["Intitule"],
-    "Debut" => $product["Debut"],
-    "Fin" => $product["Fin"],
-    "Lundi_matin" => $product["Lundi_matin"],
-    "Lundi_aprem" => $product["Lundi_aprem"],
-    "Mardi_matin" => $product["Mardi_matin"],
-    "Mardi_aprem" => $product["Mardi_aprem"],
-    "Mercredi_matin" => $product["Mercredi_matin"],
-    "Mercredi_aprem" => $product["Mercredi_aprem"],
-    "Jeudi_matin" => $product["Jeudi_matin"],
-    "Jeudi_aprem" => $product["Jeudi_aprem"],
-    "Vendredi_matin" => $product["Vendredi_matin"],
-    "Vendredi_aprem" => $product["Vendredi_aprem"],
+    "Organisme" => $feuille["Organisme"] ,
+    "Intitule" => $feuille["Intitule"],
+    "Debut" => $feuille["Debut"],
+    "Fin" => $feuille["Fin"],
+    "Lundi_matin" => $feuille["Lundi_matin"],
+    "Lundi_aprem" => $feuille["Lundi_aprem"],
+    "Mardi_matin" => $feuille["Mardi_matin"],
+    "Mardi_aprem" => $feuille["Mardi_aprem"],
+    "Mercredi_matin" => $feuille["Mercredi_matin"],
+    "Mercredi_aprem" => $feuille["Mercredi_aprem"],
+    "Jeudi_matin" => $feuille["Jeudi_matin"],
+    "Jeudi_aprem" => $feuille["Jeudi_aprem"],
+    "Vendredi_matin" => $feuille["Vendredi_matin"],
+    "Vendredi_aprem" => $feuille["Vendredi_aprem"]
   ]);
   return $result;
 }
