@@ -1,11 +1,10 @@
 <?php
 include("template/header.php");
-
 require("model/db.php");
 session_start();
 
 ?>
-<form class="mx-auto w-50 my-5" method="POST" action="UsersTreatment.php">
+<form class="mx-auto w-50 my-5" method="POST" action="userTreatment.php">
     <div class="form-group">
         <label for="userName">Nom : </label>
         <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom" required="required">
@@ -58,8 +57,9 @@ session_start();
         <option>Autre</option>
         </select>
     </div>
-    <!--Envoie les données du formulaire, créer un message de succès ou d'erreur et renvoie sur la page d'accueil des admins-->
-    <button type="submit" class="btn btn-primary">Envoyer</button>
+    <!--Envoie les données du formulaire selon si c'est un ajout ou une modification-->
+    <button type="submit" name="button" value="Envoyer" class="btn btn-primary">Envoyer</button>
+    <button type="submit" name="button" value="Modifier" class="btn btn-primary">Modifier</button>
 </form>
 <?php
 include("template/footer.php");

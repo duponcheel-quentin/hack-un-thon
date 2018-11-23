@@ -3,7 +3,7 @@
 include("template/header.php");
 require("model/db.php");
 //Je récupère les données de tous les utilisateurs et je les stocke dans une variable
-$query = $bdd->query("SELECT * FROM Users");
+$query = $db->query("SELECT * FROM Users");
 $users = $query->fetchall(PDO::FETCH_ASSOC);
 ?>
 <!--C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur-->
@@ -31,8 +31,8 @@ foreach($users as $key => $user) {
 <!--C'est la liste des utilisateurs du site-->
 <ul class="list-group w-50 mx-auto my-2">
   <li class="list-group-item"><?php echo $user["Nom"] . " " . $user["Prenom"]; ?>
-  <a class="btn btn-primary btn-sm" href="#" role="button">Modifier</a>
-  <a class="btn btn-danger btn-sm" href="#" role="button">Supprimer</a>
+  <a class="btn btn-primary btn-sm" href="userTreatment.php" role="button" name="button" value="Modifier">Modifier</a>
+  <a class="btn btn-danger btn-sm" href="userDeleteTreatment.php" role="button" name="button" value="Supprimer">Supprimer</a>
   </li>
 </ul>
 <?php
