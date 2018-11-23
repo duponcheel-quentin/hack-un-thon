@@ -10,17 +10,17 @@ if(!empty($_POST)) {
 //On sécurise les entrées du formulaire .
   foreach ($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
-    var_dump($_POST);
   }
 
+  var_dump($_POST);
 
   addFeuille($_POST, $db);
-    // header("Location: admin.php?success=Votre feuille a bien été ajoutée à la base de données");
+    header("Location: admin.php?success=Votre feuille a bien été ajoutée à la base de données");
     exit;
   }
 
 else {
-  // header("Location: feuille.php?message=Votre feuille n'a pas été crée.");
+  header("Location: feuille.php?message=Votre feuille n'a pas été crée.");
   exit;
 }
  ?>

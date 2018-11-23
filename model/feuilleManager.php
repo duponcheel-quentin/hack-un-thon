@@ -14,7 +14,7 @@ function getFeuille($id, $db) {
 }
 //Fonction qui ajoute une feuille en DB
 function addFeuille($feuille, $db) {
-  $query = $db->prepare("INSERT INTO Feuille (Organisme, Intitule, Debut, Fin, Lundi_matin, Lundi_aprem, Mardi_matin, Mardi_aprem, Mercredi_matin, Mercredi_aprem, Jeudi_matin, Jeudi_aprem, Vendredi_matin, Vendredi_aprem, Categories_ID) VALUES (:Organisme, :Intitule, :Debut, :Fin, :Lundi_matin, :Lundi_aprem, :Mardi_matin, :Mardi_aprem, :Mercredi_matin, :Mercredi_aprem, :Jeudi_matin, :Jeudi_aprem, :Vendredi_matin, :Vendredi_aprem, Categories_ID)");
+  $query = $db->prepare("INSERT INTO Feuille (Organisme, Intitule, Debut, Fin, Lundi_matin, Lundi_aprem, Mardi_matin, Mardi_aprem, Mercredi_matin, Mercredi_aprem, Jeudi_matin, Jeudi_aprem, Vendredi_matin, Vendredi_aprem) VALUES (:Organisme, :Intitule, :Debut, :Fin, :Lundi_matin, :Lundi_aprem, :Mardi_matin, :Mardi_aprem, :Mercredi_matin, :Mercredi_aprem, :Jeudi_matin, :Jeudi_aprem, :Vendredi_matin, :Vendredi_aprem)");
   $result = $query->execute([
     "Organisme" => $feuille["Organisme"] ,
     "Intitule" => $feuille["Intitule"],
@@ -29,8 +29,7 @@ function addFeuille($feuille, $db) {
     "Jeudi_matin" => $feuille["Jeudi_matin"],
     "Jeudi_aprem" => $feuille["Jeudi_aprem"],
     "Vendredi_matin" => $feuille["Vendredi_matin"],
-    "Vendredi_aprem" => $feuille["Vendredi_aprem"],
-    "Categories_ID" => $feuille["Categories_ID"]
+    "Vendredi_aprem" => $feuille["Vendredi_aprem"]
   ]);
   return $result;
 }
