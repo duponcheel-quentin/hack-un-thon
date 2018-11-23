@@ -2,7 +2,7 @@
 require("model/db.php");
 require("model/usersManagement.php");
 session_start();
-$query = $bdd->query('SELECT * FROM Users');
+$query = $db->query('SELECT * FROM Users');
 $users = $query->fetchall(PDO::FETCH_ASSOC);
 
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
@@ -14,10 +14,10 @@ if(!empty($_POST) || isset($_POST)) {
     }
     foreach($users as $key => $user) {
         if($_POST["user_password"] === $_POST["user_password2"]) {
-            addUser($_POST, $bdd);
+            addUser($_POST, $db);
             //Fin du programme, je redirige avec un message
             header("Location: admin.php?message=L'utilisateur a bien été ajouté");
-            exit; 
+            exit;
         }
         else {
             header("Location: adminAddUsers.php?message=Le mot de passe et sa confirmation ne correspondent pas!");
