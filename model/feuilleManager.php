@@ -1,6 +1,6 @@
 <?php
 // Fonction qui récupère toutes les feuillesen BD
-  function getFeuilles($db) {
+  function getAllFeuilles($db) {
   $query = $db->query("SELECT * FROM Feuille");
   $feuilles = $query->fetchall(PDO::FETCH_ASSOC);
   return $feuilles;
@@ -61,4 +61,5 @@ function deleteFeuille($id, $db) {
   $result = $query->execute([$id]);
   return $result;
 }
- ?>
+
+?>

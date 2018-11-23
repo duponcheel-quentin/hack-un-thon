@@ -1,5 +1,8 @@
 <body>
-  <section>
+  <?php
+  include "template/header.php";
+  ?>
+  <section  class="d-flex justify-content-center">
     <h1>Page de connexion</h1>
   <form method="post" action="login.php">
     <div class="form-group">
@@ -10,8 +13,9 @@
       <label for="Password">Mot de passe</label>
       <input type="password" class="form-control" id="Password" name="Password" placeholder="Entrer votre mot de passe">
     </div>
-    <div class="container_button">
-    <button type="submit" class="btn btn-primary">CONNEXION</button>
+    <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">CONNEXION</button>
     </div>
   </form>
 </section>
+<?php require "template/footer.php";?>

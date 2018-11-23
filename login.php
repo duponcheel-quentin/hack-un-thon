@@ -2,7 +2,7 @@
 //On charge le fichier avec les fonctions qui renvoient nos données
 require "model/db.php";
 
-$reponses = $bdd->query('SELECT * FROM Users');
+$reponses = $db->query('SELECT * FROM Users');
 $reponse = $reponses->fetchall();
 //On vérifie si le formulaire a été rempli
 if(!empty($_POST)) {

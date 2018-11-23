@@ -1,7 +1,7 @@
 <?php
 try
 {
-   $db = new PDO('mysql:host=localhost;dbname=Emargements;charset=utf8', 'phpmyadmin', 'Manzakin2603');
+   $db = new PDO('mysql:host=localhost;dbname=Emargements;charset=utf8', 'phpmyadmin', 'AdaLinkLoulouZelda');
 }
 catch (Exception $e)
 {
