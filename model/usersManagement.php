@@ -47,10 +47,3 @@ function deleteUser($id, $db) {
     $query->execute([$id]);
     return $query;
 }
-
-function day($db) {
-    $query = $db->prepare("SELECT * FROM Cours");
-    $query->execute(["Date" => $user["Date"]]);    
-    return $query;
-}
-?>
