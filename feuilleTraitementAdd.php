@@ -12,8 +12,6 @@ if(!empty($_POST)) {
     $_POST[$key] = htmlspecialchars($value);
   }
 
-  var_dump($_POST);
-
   addFeuille($_POST, $db);
     header("Location: admin.php?success=Votre feuille a bien été ajoutée à la base de données");
     exit;
