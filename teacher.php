@@ -1,14 +1,16 @@
-<?php require "template/header.php";?>
-<?php require "model/db.php";?>
-<?php require "model/usersManagement.php";?>
-<?php session_start();?>
-<div class="container text-center">
-<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du <?php $date = date("d-m-Y"); $heure = date("H:i"); Print("$date à $heure");?>	  </h2>
+<?php require "template/header.php";
+require "model/db.php";
+require "model/usersManagement.php";
+require "service/sessionManager.php";
+//On restreint l'accès de la page aux utilisateurs enregistrés
+restrictToUser();?>
+<div class="container text-center mt-5">
+<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du <?php echo $_SESSION["user"]["Date"] ?> </h2>
 </div>
 
-<h2>Mes cours</h2>
+<h2 class="text-center mt-5 mb-3">Mes cours</h2>
 
-<div class="dropdown">
+<div class="dropdown text-center mb-5">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Matière
   </a>
