@@ -1,6 +1,6 @@
 <?php 
-function getFeuilleByUser($id, $bdd){
-    $reponses = $bdd->prepare("SELECT f.Intitule, f.Debut, f.Fin FROM Feuille AS f 
+function getFeuilleByUser($id, $db){
+    $reponses = $db->prepare("SELECT f.Intitule, f.Debut, f.Fin FROM Feuille AS f 
                                 INNER JOIN Users_feuille AS uf ON f.Feuille_ID = uf.Feuille_ID 
                                 INNER JOIN Users AS u ON uf.Users_ID = u.Users_ID 
                                 WHERE u.Users_ID=?");

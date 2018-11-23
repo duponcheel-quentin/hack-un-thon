@@ -8,11 +8,11 @@ restrictToUser();
 
 
 var_dump($_SESSION["user"]);
-$data = getFeuilleByUser($_SESSION["user"]["Users_ID"],$bdd);
+$data = getFeuilleByUser($_SESSION["user"]["Users_ID"],$db);
 var_dump($data);
 ?>
 <div class="container text-center mt-5">
-<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du </h2>
+<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du</h2>
 </div>
 
 <h2 class="text-center mt-5 mb-3">Mes cours</h2>
