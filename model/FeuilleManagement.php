@@ -1,5 +1,6 @@
 <?php 
-function getFeuilleByUser($id, $db){
+function getFeuilleByUser($id){
+    $db = getDataBase();
     $reponses = $db->prepare("SELECT f.Intitule, f.Debut, f.Fin FROM Feuille AS f 
                                 INNER JOIN Users_feuille AS uf ON f.Feuille_ID = uf.Feuille_ID 
                                 INNER JOIN Users AS u ON uf.Users_ID = u.Users_ID 
