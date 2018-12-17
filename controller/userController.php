@@ -1,6 +1,9 @@
-<?php
-//On charge le fichier avec les fonctions qui renvoient nos données
+<?php 
 require "model/db.php";
+
+
+function showLogin(){
+    //On charge le fichier avec les fonctions qui renvoient nos données
 
 $reponses = $db->query('SELECT * FROM Users');
 $reponse = $reponses->fetchall();
@@ -32,5 +35,10 @@ if(!empty($_POST)) {
 //Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
   header("Location: index.php?message=Vous devez remplir les champs du formulaire");
   exit;
+};
 
- ?>
+function showLogout(){
+    require "service/sessionManager.php";
+    logout();
+};
+?>

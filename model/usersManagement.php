@@ -1,12 +1,14 @@
 <?php 
 //Récupère les données d'un utilisateur
-function getUser($db, $id) {
+function getUser($id) {
+    $db = getDataBase();
     $query = $db->prepare("SELECT * FROM Users WHERE Users_ID = ?");
     $result = $query->execute([$id]);
     return $result;
 }
 //function that adds the user
-function addUser($user, $db) {
+function addUser($user) {
+    $db = getDataBase();
     $query = $db->prepare("INSERT INTO Users (Status, Nom, Prenom, Password, Password_verif, Adresse_mail, Rue, Ville, Code_postal, Identifiant_emploi, Sexe) VALUES(:Status, :Nom, :Prenom, :Password, :Password_verif, :Adresse_mail, :Rue, :Ville, :Code_postal, :Identifiant_emploi, :Sexe)");
     $query->execute([
         "Status" => $user["user_status"] ,
@@ -24,7 +26,8 @@ function addUser($user, $db) {
     return $query;
 }
 //function that modifies the user
-function updateUser($user, $db) {
+function updateUser($user) {
+    $db = getDataBase();
     $query = $db->prepare("UPDATE Users SET Status = :Status, Nom = :Nom, Prenom = :Prenom, Password = :Password, Password_verif = :Password_verif, Adresse_mail = :Adresse_mail, Rue = :Rue, Ville = :Ville, Code_postal = :Code_postal, Identifiant_emploi = :Identifiant_emploi, Sexe = :Sexe");
     $query->execute([
         "Status" => $user["user_status"] ,
@@ -42,7 +45,8 @@ function updateUser($user, $db) {
     return $query;
 }
 //function that removes the user
-function deleteUser($id, $db) {
+function deleteUser($id) {
+    $db = getDataBase();
     $query = $db->prepare("DELETE FROM Users WHERE Users_ID = ?");
     $query->execute([$id]);
     return $query;
