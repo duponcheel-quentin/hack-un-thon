@@ -27,14 +27,15 @@ function getUserByName($userName) {
 }
 //function that adds the user
 function addUser($user) {
+    var_dump($user);
     $db = getDataBase();
-    $request = $db->prepare("INSERT INTO users (status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex) VALUES(status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex)");
-    $request->execute([
+    $request = $db->prepare("INSERT INTO users (status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex) VALUES(:status, :name, :firstname, :password, :password_verif, :mail, :street, :city, :pc, :id_pole_emploi, :sex)");
+    $result = $request->execute([
         "status" => $user["user_status"] ,
         "name" => $user["user_name"],
         "firstname" => $user["user_firstname"],
-        "password" => $user["user_password"],
-        "password_verif" => $user["user_password2"],
+        "password" =>  password_hash($user["user_password"], PASSWORD_BCRYPT, ['cost' => 13]),
+        "password_verif" => password_hash($user["user_password2"], PASSWORD_BCRYPT, ['cost' => 13]),
         "mail" => $user["user_mail"],
         "street" => $user["user_street"],
         "city" => $user["user_city"],
@@ -42,7 +43,7 @@ function addUser($user) {
         "id_pole_emploi" => $user["user_jobID"],
         "sex" => $user["user_sexe"]
     ]); 
-    $result = $request->fetchall(PDO::FETCH_ASSOC);
+    //$result = $request->fetch(PDO::FETCH_ASSOC);
     $request->closeCursor();   
     return $result;
 }

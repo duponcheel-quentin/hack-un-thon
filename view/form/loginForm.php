@@ -1,4 +1,4 @@
-<form method="post" action="login.php">
+<form method="post">
     <div class="form-group">
       <label for="name">Nom</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Entrer votre nom">

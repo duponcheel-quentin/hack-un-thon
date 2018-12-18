@@ -11,10 +11,9 @@ include "template/header.php";
     <div class="card text-white bg-primary mb-3" style="width: 20rem">
       <div class="card-header">Catégories</div>
         <div class="card-body">
-          <p class="card-text">Créer ou Supprimer des catégories.</p>
+          <p class="card-text">Consulter les catégories.</p>
           <div class="d-flex justify-content-around">
-            <button type="button" href="" class="btn btn-light">Créer</button>
-            <button type="button" href="#" class="btn btn-light">Supprimer</button>
+            <button type="button" href="categories/list" class="btn btn-light">Voir</button>
           </div>
         </div>
     </div>
@@ -28,39 +27,11 @@ include "template/header.php";
   <div class="card-body">
     <p class="card-text">Consuter les feuilles d'émargements.</p>
     <div class="d-flex justify-content-around">
-    <button type="button" href="" class="btn btn-light">Voir</button>
+    <button type="button" href="sheets/list" class="btn btn-light">Voir</button>
   </div>
   </div>
 </div>
 </div>
-<div class="col-12 col-sm-12 col-md-6">
-<div class="card text-white bg-success mb-3" style="width: 20rem;">
-  <div class="card-header">Feuilles</div>
-  <div class="card-body">
-    <p class="card-text">Créer ou Modifier une feuille d'emargement.</p>
-    <div class="d-flex justify-content-around">
-    <a href=""><button type="button" class="btn btn-light">Créer</button></a>
-    <a href=""><button type="button" class="btn btn-light">Modifier</button></a>
-    <a href=""><button type="button" class="btn btn-light">Supprimer</button></a>
-    </div>
-    </div>
-  </div>
-  </div>
-</div>
-
-  <div class="col-12 col-sm-12 d-flex justify-content-center col-md-6 d-flex justify-content-start">
-    <div class="card text-white bg-success mb-3" style="width: 20rem">
-      <div class="card-header">Feuilles</div>
-        <div class="card-body">
-          <p class="card-text">Créer ou Modifier une feuille d'emargement.</p>
-          <div class="d-flex justify-content-around">
-            <button type="button" href="#" class="btn btn-light">Créer</button>
-            <button type="button" href="#" class="btn btn-light">Modifier</button>
-          </div>
-        </div>
-    </div>
-  </div>
-
 <!--
 ~~~~~~~~~~~~~~~| UTILISATEURS |~~~~~~~~~~
 -->
@@ -68,11 +39,9 @@ include "template/header.php";
     <div class="card text-white bg-warning mb-3" style="width: 20rem">
       <div class="card-header">Utilisateurs</div>
         <div class="card-body">
-          <p class="card-text">Créer, Modifier ou Supprimer un utilisateur.</p>
+          <p class="card-text">Consulter les utilisateurs.</p>
           <div class="d-flex justify-content-around">
-            <a href="adminAddUsers.php"><button type="button" class="btn btn-light">Ajouter</button></a>
-            <a href=""><button type="button" class="btn btn-light">Modifier</button></a>
-            <a href=""><button type="button" class="btn btn-light">Supprimer</button></a>
+            <a href="users/list"><button type="button" class="btn btn-light">Voir</button></a>
           </div>
         </div>
     </div>

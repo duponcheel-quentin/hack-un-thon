@@ -1,4 +1,4 @@
-<form class="mx-auto w-50 my-5" method="POST" action="userTreatment.php">
+<form class="mx-auto w-50 my-5" method="POST">
     <div class="form-group">
         <label for="userName">Nom : </label>
         <input type="text" class="form-control" name="user_name" id="userName" placeholder="nom" required="required">
@@ -38,9 +38,9 @@
     <div class="form-group">
         <label for="userStatus">Status : </label>
         <select class="form-control" name="user_status" id="userStatus" required="required">
-        <option>Admin</option>
-        <option>Professeur</option>
-        <option>Apprenant</option>
+        <option>admin</option>
+        <option>teacher</option>
+        <option>apprenant</option>
         </select>
     </div>
     <div class="form-group">

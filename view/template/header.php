@@ -18,10 +18,10 @@
 
 </head>
 <body>
-<div class="d-flex justify-content-end"><a href="logout.php">Bouton déconnexion</a></div>
-  <img class="card-img-top w-25 container d-flex" src="img/adep-logo-cut.png" alt="Logo adep">
+<a class="nav-link btn btn-danger w-25" href="user/logout">Deconnexion</a>
+  <img class="card-img-top w-25 container d-flex" src="public/img/adep-logo-cut.png" alt="Logo adep">
   <div class="card-body">
-    <p class="card-text text-center">Bienvenu sur le site de l'Adep.</p>
+    <h2 class="card-text text-center">Bienvenu sur le site de l'Adep.</h2>
   </div>
 </div>
 <main>
