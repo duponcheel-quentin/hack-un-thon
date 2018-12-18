@@ -15,7 +15,7 @@ function addCategories($categories) {
     ]);
     return $query;
   }
-
+//function qui ...
 function deleteCategories($id) {
   $db = getDataBase();
   $query = $db->prepare("DELETE FROM categories WHERE ID = ?");
