@@ -1,4 +1,4 @@
-<form class="mx-auto w-50 my-5 container" method="post" action="feuilleTraitementAdd.php">
+<form class="mx-auto w-50 my-5 container" method="post" action="">
   <div class="form-group">
     <label for="organization" class="col-sm-2 col-form-label">Organisme</label>
     <input type="text" class="form-control" id="organization" name="organization" placeholder="Organisme">

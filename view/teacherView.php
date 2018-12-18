@@ -1,8 +1,5 @@
 <?php 
 include "template/header.php";
-//On restreint l'accès de la page aux utilisateurs enregistrés
-restrictToUser();
-$data = getFeuilleByUser($_SESSION["user"]["Users_ID"],$db);
 ?>
 <div class="container text-center mt-5">
 <h2>Bonjour <?php echo $_SESSION["user"]["name"];?> liste emargement du</h2>

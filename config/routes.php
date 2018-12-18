@@ -12,41 +12,93 @@
 //]
 function getRoutes() {
   return [
+    //route basique
     "" => [
       "user",
-      "login",
+      "userLogin",
     ],
-    "Accueil" => [
-      "user",
-      "showUsers",
+    //page principale des professeurs
+    "teacher" => [
+      "admin",
+      "showSheetByUser",
+      "status" => "teacher"
+    ],
+    //page principale des admins
+    "admin" => [
+      "admin",
+      "showAdminView",
       "status" => "admin"
     ],
-    "addUser" => [
-      "user",
+    //~~~~~~~~~~~~~~~~~~~~~~~~USERS~~~~~~~~~~~~~~~~~~~
+    "users/list" => [
+      "admin",
+      "showUsersList",
+      "status" => "admin"
+    ],
+    "user/add" => [
+      "admin",
       "showAddUser",
       "status" => "admin"      
     ],
-    "updateUser" => [
-      "user",
+    "user/update" => [
+      "admin",
       "showUpdateUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "deleteUser" => [
-      "user",
+    "user/delete" => [
+      "admin",
       "showDeleteUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "message" => [
-      "message",
-      "showMessage",
-      "status" => "user"
-    ],
-    "logout" => [
+    //La deconnexion
+    "user/logout" => [
       "user",
-      "disconnect",
-      "status" => "user"
+      "userLogout",
+      "status" => "teacher"
+    ],
+    //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
+    "sheets/list" => [
+      "sheet",
+      "",
+      "status" => "admin"
+    ],
+    "sheet/add" => [
+      "sheet",
+      "",
+      "status" => "admin"
+    ],
+    "sheet/update" => [
+      "sheet",
+      "",
+      "status" => "admin"
+    ],
+    "sheet/delete" => [
+      "sheet",
+      "",
+      "status" => "admin"
+    ],
+    //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
+    "categories/list" => [
+      "category",
+      "",
+      "status" => "admin"
+    ],
+    "categorie/add" => [
+      "category",
+      "",
+      "status" => "admin"
+    ],
+    "categorie/update" => [
+      "category",
+      "",
+      "status" => "admin"
+    ],
+    "categorie/delete" => [
+      "category",
+      "",
+      "status" => "admin"
     ],
   ];
 }
