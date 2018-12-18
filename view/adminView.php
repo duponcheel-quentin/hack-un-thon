@@ -1,8 +1,5 @@
 <?php
 include "template/header.php";
-require "service/sessionManager.php";
-//On restreint l'accès de la page aux utilisateurs enregistrés
-restrictToAdmin();
 ?>
 
 <!--

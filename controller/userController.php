@@ -1,9 +1,10 @@
 <?php 
 require "model/db.php";
+require "service/sessionManager.php";
+
 
 
 function showLogin(){
-    //On charge le fichier avec les fonctions qui renvoient nos données
 
 $reponses = $db->query('SELECT * FROM Users');
 $reponse = $reponses->fetchall();
@@ -38,7 +39,6 @@ if(!empty($_POST)) {
 };
 
 function showLogout(){
-    require "service/sessionManager.php";
     logout();
 };
 ?>
