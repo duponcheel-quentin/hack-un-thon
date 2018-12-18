@@ -1,44 +1,30 @@
 <?php 
-require "model/db.php";
-require "service/sessionManager.php";
-
-
-
-function showLogin(){
-
-$reponses = $db->query('SELECT * FROM Users');
-$reponse = $reponses->fetchall();
+function userLogin() {
 //On vérifie si le formulaire a été rempli
-if(!empty($_POST)) {
+if (!empty($_POST)) {
   //On nettoie les entrées du formulaire
   foreach ($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
   }
-  //On récupère les utilisateurs stockés
-  foreach ($reponse as $key =>$user) {
-    if($user["Nom"] === $_POST["Name"] && $_POST["Password"] === $user["Password"]) {
-      //On démarre une session pour y stocker les informations de l'utilisateur
-      session_start();
-      $_SESSION["user"] = $user;
-      if ($_SESSION["user"]["Status"] === "Admin") {
+  if (getUserByName($_POST)) {
+    $user = getUserByName($_POST);
+    if (password_verify($_POST["password"], $user["password"])) {
+        initializeUserSession($user);
+      if ($_SESSION["user"]["status"] === "Admin") {
         header("Location: admin.php");
         exit;
       }
-      if ($_SESSION["user"]["Status"] === "Teacher"){
+      if ($_SESSION["user"]["status"] === "Teacher"){
         header("Location: teacher.php");
         exit;
       }
     }
   }
-  // header("Location: index.php?message=Nous n'avons aucun utilisateur avec ce nom ou ce mot de passe");
-  exit;
 }
-//Si le formulaire n'est pas rempli on renvoie l'utilisateur sur la page de connexion avec un message d'erreur
-  header("Location: index.php?message=Vous devez remplir les champs du formulaire");
-  exit;
-};
+require("view/listUsersView.php");
+}
 
-function showLogout(){
-    logout();
-};
+function userLogout(){
+  logout();
+}
 ?>

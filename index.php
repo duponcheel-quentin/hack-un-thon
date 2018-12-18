@@ -1,21 +1,14 @@
-<body>
-  <?php
-  include "template/header.php";
-  ?>
-  <section  class="d-flex justify-content-center">
-    <h1>Page de connexion</h1>
-  <form method="post" action="login.php">
-    <div class="form-group">
-      <label for="Name">Nom</label>
-      <input type="text" class="form-control" id="Name" name="Name" placeholder="Entrer votre nom">
-    </div>
-    <div class="form-group">
-      <label for="Password">Mot de passe</label>
-      <input type="password" class="form-control" id="Password" name="Password" placeholder="Entrer votre mot de passe">
-    </div>
-    <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-primary">CONNEXION</button>
-    </div>
-  </form>
-</section>
-<?php require "template/footer.php";?>
+<?php 
+require "config/global.php";
+require "model/db.php";
+require "model/categoriesManagement.php";
+require "model/sheetManagement.php";
+require "model/sheetManager.php";
+require "model/usersManager.php";
+require "service/formChecker.php";
+require "service/router.php";
+require "service/sessionManager.php";
+require "service/urlManager.php";
+
+route();
+?>

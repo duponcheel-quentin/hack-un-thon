@@ -1,18 +1,11 @@
-<?php require "template/header.php";
-require "model/db.php";
-require "model/usersManagement.php";
-require "service/sessionManager.php";
-require "model/FeuilleManagement.php";
+<?php 
+include "template/header.php";
 //On restreint l'accès de la page aux utilisateurs enregistrés
 restrictToUser();
-
-
-var_dump($_SESSION["user"]);
 $data = getFeuilleByUser($_SESSION["user"]["Users_ID"],$db);
-var_dump($data);
 ?>
 <div class="container text-center mt-5">
-<h2>Bonjour <?php echo $_SESSION["user"]["Nom"];?> liste emargement du</h2>
+<h2>Bonjour <?php echo $_SESSION["user"]["name"];?> liste emargement du</h2>
 </div>
 
 <h2 class="text-center mt-5 mb-3">Mes cours</h2>
@@ -42,4 +35,4 @@ var_dump($data);
 
   </div>
 </div>
-<?php require "template/footer.php";?>
+<?php include "template/footer.php";?>

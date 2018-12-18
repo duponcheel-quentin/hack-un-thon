@@ -1,10 +1,7 @@
 <?php
-// on charge la session
-session_start();
-// on charge le header
-require "template/header.php";
+include "template/header.php";
+?>
 
- ?>
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -66,3 +63,7 @@ require "template/header.php";
     </tr>
   </tbody>
 </table>
+
+<?php
+include "template/footer.php";
+?>

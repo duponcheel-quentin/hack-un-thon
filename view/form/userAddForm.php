@@ -1,6 +1,3 @@
-<?php
-include "template/header.php";
-?>
 <form class="mx-auto w-50 my-5" method="POST" action="userTreatment.php">
     <div class="form-group">
         <label for="userName">Nom : </label>
@@ -58,6 +55,3 @@ include "template/header.php";
     <button type="submit" name="button" value="Envoyer" class="btn btn-primary">Envoyer</button>
     <button type="submit" name="button" value="Modifier" class="btn btn-primary">Modifier</button>
 </form>
-<?php
-include "template/footer.php";
-?>
