@@ -25,7 +25,7 @@ foreach ($_POST as $key => $value) {
 }
 };
 
-function showAddLeaf(){
+function showAddSheet(){
     //On charge la connexion
 require "model/db.php";
 //On charge le fichier qui contien les fonctions
@@ -39,7 +39,7 @@ if(!empty($_POST)) {
     $_POST[$key] = htmlspecialchars($value);
   }
 
-  addFeuille($_POST, $db);
+  addSheet($_POST, $db);
     header("Location: admin.php?success=Votre feuille a bien été ajoutée à la base de données");
     exit;
   }
@@ -50,15 +50,15 @@ else {
 }
 };
 
-function showDeleteLeaf(){
+function showDeleteSheet(){
     //on charge la connexion à la db
 require "model/db.php";
-require "model/feuilleManager.php";
+require "model/sheetManager.php";
 // on démarre une session
 session_start();
-if(isset($_GET["Feuille_ID"])) {
+if(isset($_GET["sheet_ID"])) {
   //On récupère l'id du produit à supprimer
-  $id = intval(htmlspecialchars($_GET["Feuille_ID"]));
+  $id = intval(htmlspecialchars($_GET["sheet_ID"]));
 
   //On appelle la fonction de suppression de produit
   if(deleteProduct($id, $db)) {
@@ -75,7 +75,7 @@ if(isset($_GET["Feuille_ID"])) {
 function showUpdateLeaf(){
 //On charge les fonctions de gestion des données
 require "Model/db.php";
-require "Model/feuilleManager.php";
+require "Model/sheetManager.php";
 
 if(!empty($_POST)) {
   //On sécurise les entrées du formulaire et on transforme en integer ce qui doit l'être pour la DB
@@ -89,7 +89,7 @@ if(!empty($_POST)) {
     exit;
   }
   else {
-    header("Location: updateFeuille.php?Feuille_ID=" . $_POST["Feuille_ID"] ."&message=votre feille n'a pas été supprimée");
+    header("Location: updateSheet.php?Feuille_ID=" . $_POST["sheet_ID"] ."&message=votre feille n'a pas été modifiée");
     exit;
   }
 }
