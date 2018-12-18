@@ -1,7 +1,7 @@
 <?php
 function getDataBase() {
    try {
-     $db = new PDO('mysql:host=localhost;dbname=Signing;charset=utf8', 'phpmyadmin1', 'Azerty59');
+     $db = new PDO('mysql:host=localhost;dbname=signing;charset=utf8', 'phpmyadmin', 'AdaLinkLoulouZelda');
    }
    catch (Exception $e){
      die('Erreur : ' . $e->getMessage());

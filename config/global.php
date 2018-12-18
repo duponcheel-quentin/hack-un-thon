@@ -3,7 +3,7 @@
 function getGlobalConfig() {
   return $config = [
     "protocol" => "",
-    "host" => "localhost/Lab/Planete/BoilerplateMVC/",
+    "host" => "localhost/Lab/hack-un-thon/",
     "status" => ["anonymous", "user", "admin"],
     "defaultRoute" => ""
   ];
