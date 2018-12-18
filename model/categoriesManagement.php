@@ -1,7 +1,7 @@
 <?php
 function getCategories($id) {
   $db = getDataBase();
-  $query = $db->prepare("SELECT * FROM Categories WHERE ID=?");
+  $query = $db->prepare("SELECT * FROM categories WHERE ID=?");
   $query->execute([$id]);
   $categories = $query->fetchall(PDO::FETCH_ASSOC);
   return $categories;
@@ -9,16 +9,16 @@ function getCategories($id) {
 
 function addCategories($categories) {
     $db = getDataBase();
-    $query = $db->prepare("INSERT INTO Categories(Categories_name) VALUES(:Categories_name)");
+    $query = $db->prepare("INSERT INTO categories(categories_name) VALUES(:categories_name)");
     $query->execute([
-        "Categories_name" => $categories["Categories_name"]
+        "categories_name" => $categories["categories_name"]
     ]);
     return $query;
   }
 //function qui ...
 function deleteCategories($id) {
   $db = getDataBase();
-  $query = $db->prepare("DELETE FROM Categories WHERE ID = ?");
+  $query = $db->prepare("DELETE FROM categories WHERE ID = ?");
   $query->execute([$id]);
   return $query;
     }
