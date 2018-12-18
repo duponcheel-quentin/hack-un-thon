@@ -1,8 +1,5 @@
 <?php
-include("template/header.php");
-require("model/db.php");
-session_start();
-
+include "template/header.php";
 ?>
 <form class="mx-auto w-50 my-5" method="POST" action="userTreatment.php">
     <div class="form-group">
@@ -62,5 +59,5 @@ session_start();
     <button type="submit" name="button" value="Modifier" class="btn btn-primary">Modifier</button>
 </form>
 <?php
-include("template/footer.php");
+include "template/footer.php";
 ?>
