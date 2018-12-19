@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<a class="nav-link btn btn-danger w-25" href="user/logout">Deconnexion</a>
+<a class="nav-link btn btn-danger w-25" href="userLogout">Deconnexion</a>
   <img class="card-img-top w-25 container d-flex" src="public/img/adep-logo-cut.png" alt="Logo adep">
   <div class="card-body">
     <h2 class="card-text text-center">Bienvenu sur le site de l'Adep.</h2>

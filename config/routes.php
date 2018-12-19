@@ -30,72 +30,72 @@ function getRoutes() {
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~USERS~~~~~~~~~~~~~~~~~~~
-    "users/list" => [
+    "usersList" => [
       "admin",
       "showUsersList",
       "status" => "admin"
     ],
-    "user/add" => [
+    "userAdd" => [
       "admin",
       "showAddUser",
       "status" => "admin"      
     ],
-    "user/update" => [
+    "userUpdate" => [
       "admin",
       "showUpdateUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "user/delete" => [
+    "userDelete" => [
       "admin",
       "showDeleteUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
     //La deconnexion
-    "user/logout" => [
+    "userLogout" => [
       "user",
       "userLogout",
       "status" => "teacher"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
-    "sheets/list" => [
+    "sheetsList" => [
       "sheet",
       "showSheetByUser",
       "status" => "admin"
     ],
-    "sheet/add" => [
+    "sheetAdd" => [
       "sheet",
       "showAddSheet",
       "status" => "admin"
     ],
-    "sheet/update" => [
+    "sheetUpdate" => [
       "sheet",
       "showUpdateSheet",
       "status" => "admin"
     ],
-    "sheet/delete" => [
+    "sheetDelete" => [
       "sheet",
       "showDeleteSheet",
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
-    "categories/list" => [
+    "categoriesList" => [
       "category",
       "",
       "status" => "admin"
     ],
-    "categorie/add" => [
+    "categorieAdd" => [
       "category",
       "showAddCategories",
       "status" => "admin"
     ],
-    "categorie/update" => [
+    "categorieUpdate" => [
       "category",
       "",
       "status" => "admin"
     ],
-    "categorie/delete" => [
+    "categorieDelete" => [
       "category",
       "",
       "status" => "admin"
