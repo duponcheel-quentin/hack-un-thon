@@ -3,7 +3,7 @@
 function getGlobalConfig() {
   return $config = [
     "protocol" => "",
-    "host" => "localhost/Lab/hack-un-thon/",
+    "host" => "localhost/lab/hack-un-thon/",
     "status" => ["anonymous", "teacher", "admin"],
     "defaultRoute" => ""
   ];
