@@ -33,6 +33,6 @@ function showAdminView(){
  require "view/adminView.php";
 }
 function showUsersList() {
-  require "view/listUsersView.php";
+ require "view/listUsersView.php";
 }
 ?>
