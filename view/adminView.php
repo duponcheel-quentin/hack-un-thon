@@ -27,7 +27,7 @@ include "template/header.php";
   <div class="card-body">
     <p class="card-text">Consuter les feuilles d'émargements.</p>
     <div class="d-flex justify-content-around">
-    <button type="button" href="sheets/list" class="btn btn-light">Voir</button>
+    <button type="button" href="sheetsList" class="btn btn-light">Voir</button>
   </div>
   </div>
 </div>
@@ -41,7 +41,7 @@ include "template/header.php";
         <div class="card-body">
           <p class="card-text">Consulter les utilisateurs.</p>
           <div class="d-flex justify-content-around">
-            <a href="users/list"><button type="button" class="btn btn-light">Voir</button></a>
+            <a href="usersList"><button type="button" class="btn btn-light">Voir</button></a>
           </div>
         </div>
     </div>
