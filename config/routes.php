@@ -61,22 +61,22 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
     "sheets/list" => [
       "sheet",
-      "",
+      "showSheetByUser",
       "status" => "admin"
     ],
     "sheet/add" => [
       "sheet",
-      "",
+      "showAddSheet",
       "status" => "admin"
     ],
     "sheet/update" => [
       "sheet",
-      "",
+      "showUpdateSheet",
       "status" => "admin"
     ],
     "sheet/delete" => [
       "sheet",
-      "",
+      "showDeleteSheet",
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
@@ -87,7 +87,7 @@ function getRoutes() {
     ],
     "categorie/add" => [
       "category",
-      "",
+      "showAddCategories",
       "status" => "admin"
     ],
     "categorie/update" => [
