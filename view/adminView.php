@@ -13,7 +13,7 @@ include "template/header.php";
         <div class="card-body">
           <p class="card-text">Consulter les catégories.</p>
           <div class="d-flex justify-content-around">
-            <button type="button" href="categoriesList" class="btn btn-light">Voir</button>
+            <button type="button" href="categories/list" class="btn btn-light">Voir</button>
           </div>
         </div>
     </div>
@@ -27,7 +27,7 @@ include "template/header.php";
   <div class="card-body">
     <p class="card-text">Consuter les feuilles d'émargements.</p>
     <div class="d-flex justify-content-around">
-    <button type="button" href="sheetList" class="btn btn-light">Voir</button>
+    <button type="button" href="sheetsList" class="btn btn-light">Voir</button>
   </div>
   </div>
 </div>

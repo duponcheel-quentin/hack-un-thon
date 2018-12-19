@@ -1,7 +1,5 @@
 <?php
-
 //Function qui retourne un tableau contenant les routes de notre application
-
 //Modèle des routes
 //"NomDeLaRoute" => [
 //  "Controller",
@@ -10,10 +8,11 @@
 //    "parametre1" => ["typeAttendu", optionnel[valeurAttendu]],
 //    "parametre2" => ["typeAttendu", optionnel[valeurAttendu]]
 //  ]
-// "role" => "role"
+// "status" => "role"
 //]
 function getRoutes() {
   return [
+    //route basique
     "" => [
       "user",
       "userLogin",
@@ -39,7 +38,7 @@ function getRoutes() {
     "userAdd" => [
       "admin",
       "showAddUser",
-      "status" => "admin"
+      "status" => "admin"      
     ],
     "userUpdate" => [
       "admin",
@@ -60,7 +59,7 @@ function getRoutes() {
       "status" => "teacher"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
-    "sheetList" => [
+    "sheetsList" => [
       "sheet",
       "showSheetByUser",
       "status" => "admin"
@@ -103,5 +102,4 @@ function getRoutes() {
     ],
   ];
 }
-
  ?>
