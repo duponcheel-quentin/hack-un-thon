@@ -1,7 +1,5 @@
 <?php
-
 //Function qui retourne un tableau contenant les routes de notre application
-
 //Modèle des routes
 //"NomDeLaRoute" => [
 //  "Controller",
@@ -10,10 +8,11 @@
 //    "parametre1" => ["typeAttendu", optionnel[valeurAttendu]],
 //    "parametre2" => ["typeAttendu", optionnel[valeurAttendu]]
 //  ]
-// "role" => "role"
+// "status" => "role"
 //]
 function getRoutes() {
   return [
+    //route basique
     "" => [
       "user",
       "userLogin",
@@ -31,77 +30,76 @@ function getRoutes() {
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~USERS~~~~~~~~~~~~~~~~~~~
-    "usersList" => [
+    "users/list" => [
       "admin",
       "showUsersList",
       "status" => "admin"
     ],
-    "userAdd" => [
+    "user/add" => [
       "admin",
       "showAddUser",
-      "status" => "admin"
+      "status" => "admin"      
     ],
-    "userUpdate" => [
+    "user/update" => [
       "admin",
       "showUpdateUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "userDelete" => [
+    "user/delete" => [
       "admin",
       "showDeleteUser",
       ["id" => ["integer"]],
       "status" => "admin"
     ],
     //La deconnexion
-    "userLogout" => [
+    "user/logout" => [
       "user",
       "userLogout",
       "status" => "teacher"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
-    "sheetList" => [
+    "sheets/list" => [
       "sheet",
       "showSheetByUser",
       "status" => "admin"
     ],
-    "sheetAdd" => [
+    "sheet/add" => [
       "sheet",
       "showAddSheet",
       "status" => "admin"
     ],
-    "sheetUpdate" => [
+    "sheet/update" => [
       "sheet",
       "showUpdateSheet",
       "status" => "admin"
     ],
-    "sheetDelete" => [
+    "sheet/delete" => [
       "sheet",
       "showDeleteSheet",
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
-    "categoriesList" => [
+    "categories/list" => [
       "category",
       "",
       "status" => "admin"
     ],
-    "categorieAdd" => [
+    "categorie/add" => [
       "category",
       "showAddCategories",
       "status" => "admin"
     ],
-    "categorieUpdate" => [
+    "categorie/update" => [
       "category",
       "",
       "status" => "admin"
     ],
-    "categorieDelete" => [
+    "categorie/delete" => [
       "category",
       "",
       "status" => "admin"
     ],
   ];
 }
-
  ?>
