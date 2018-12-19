@@ -24,8 +24,13 @@ require("view/loginView.php");
 }
 
 function userLogout()  {
+  session_start();
+  if (isLogged()) {
       logout();
       redirectTo("");
   }
-
+  else {
+      redirectTo("");
+  }
+}
 ?>

@@ -1,7 +1,7 @@
 <?php
 //J'appelle les pages nécessaires à cette page
 include "template/header.php";
-$user = getUsers();
+$users = getUsers();
 ?>
 <!--C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur-->
 <div class="dropdown mx-auto w-50 my-5">
@@ -26,7 +26,7 @@ foreach($users as $key => $user) {
 
 <!--C'est la liste des utilisateurs du site-->
 <ul class="list-group w-50 mx-auto my-2">
-  <li class="list-group-item"><?php echo $user["name"] . " " . $user["fistname"]; ?>
+  <li class="list-group-item"><?php echo $user["name"] . " " . $user["firstname"]; ?>
   <a class="btn btn-primary btn-sm" href="" role="button" name="button" value="Modifier">Modifier</a>
   <a class="btn btn-danger btn-sm" href="" role="button" name="button" value="Supprimer">Supprimer</a>
   </li>
