@@ -1,5 +1,5 @@
 <?php
-function showListSheet(){
+function showListSheets(){
   $sheets = getAllSheets();
   require "view/listSheetsView.php";
 }
@@ -44,4 +44,9 @@ function showDeleteSheet(){
       redirectTo("sheetsList");
     }
   }
+}
+
+function showSheetByUser() {
+  $sheetByUser = hetSheetByUser($_SESSION["user"]["user_id"]);
+  require "view/teacherView.php";
 }

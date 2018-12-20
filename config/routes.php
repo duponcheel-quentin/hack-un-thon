@@ -66,7 +66,7 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
     "sheetsList" => [
       "sheet",
-      "showSheets",
+      "showListSheets",
       "status" => "admin"
     ],
     "sheetAdd" => [
