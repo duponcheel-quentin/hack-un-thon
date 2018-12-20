@@ -17,7 +17,7 @@ if(!empty($_POST) && $_POST["button"] === "Envoyer") {
 }
 function showUpdateUser(){
     //~~~~~~~~~~~~~~~Modifie un utilisateur~~~~~~~~~~~~~~~
-if(!empty($_POST) || isset($_POST) && $_POST["button"] === "Modifier") {
+if(!empty($_POST) && $_POST["button"] === "Modifier") {
     //Je nettoie le form et sécurise les données
     foreach($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
@@ -27,6 +27,9 @@ if(!empty($_POST) || isset($_POST) && $_POST["button"] === "Modifier") {
         redirectTo("admin");
       }     
     }
+    $id = (int)htmlspecialchars($_GET["id"]);
+    $user = getUser($id);
+   require "view/userUpdateView.php";
 }
 
 function showAdminView(){
