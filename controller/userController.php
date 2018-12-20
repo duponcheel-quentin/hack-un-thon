@@ -24,8 +24,8 @@ require("view/loginView.php");
 }
 
 function userLogout()  {
-      logout();
-      redirectTo("");
-  }
+  logout();
+  redirectTo("");
+}
 
 ?>

@@ -4,7 +4,11 @@ function showAddUser(){
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
 //Je vérifie que le form contient quelque chose
 $value = "Ajouter";
+<<<<<<< HEAD
 if(!empty($_POST) && $_POST["button"] === "AJOUTER") {
+=======
+if(!empty($_POST) && $_POST["button"] === "Ajouter") {
+>>>>>>> d4752162a3e9c82f8f23cea63a1c99bfb1e11dec
     //Je nettoie le form et sécurise les données
     foreach($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
@@ -18,6 +22,7 @@ if(!empty($_POST) && $_POST["button"] === "AJOUTER") {
     require "view/userAddView.php";
 }
 function showUpdateUser(){
+    $value = "Modifier";
     //~~~~~~~~~~~~~~~Modifie un utilisateur~~~~~~~~~~~~~~~
 if(!empty($_POST) && $_POST["button"] === "Modifier") {
     //Je nettoie le form et sécurise les données
@@ -27,18 +32,12 @@ if(!empty($_POST) && $_POST["button"] === "Modifier") {
         $id = htmlspecialchars($_GET["id"]);
         $user = getUser($id);
     }
-    if(!empty($_POST) && $_POST["button"] === "Modifier") {
-        //Je nettoie le form et sécurise les données
-        foreach($_POST as $key => $value) {
-        $_POST[$key] = htmlspecialchars($value);
-        }
         if(updateUser($_POST, $id)) {
         //Fin du programme, je redirige avec un message
         redirectTo("usersList");
       }     
     }
     require "view/userAddView.php";
-}
 }
 }
 function showDeleteUser() {
