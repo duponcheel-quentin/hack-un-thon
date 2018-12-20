@@ -116,5 +116,10 @@ function sortUser($form){
                                 $sql .= " DESC";
                             }
     }
+    var_dump ($sql) ;
+    $query = $db->query($sql);
+    $result = $query->fetchall(PDO::FETCH_ASSOC);
+    $query->closeCursor();
+    return $result;
 }
 ?>

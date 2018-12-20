@@ -3,7 +3,6 @@
 include "template/header.php";
 $users = getUsers();
 require "form/sortUsersForm.php";
-$sort = sortUser($_POST);
 //C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 ?>
 
