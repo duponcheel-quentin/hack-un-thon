@@ -1,6 +1,7 @@
 <?php
 function showListSheet(){
-
+$sheets = getAllSheets();
+require "view/listSheetsView.php";
 }
 function showAddSheet(){
 // on verifie que les entrées de notre formulaire ne soient pas vides
@@ -42,6 +43,6 @@ if(!empty($_POST)) {
 }
 function showSheetByUser(){
     $sheetByUser = getSheetByUser($_SESSION["user"]["user_id"]);
-    require "viewteacherView.php";
+    require "view/teacherView.php";
   }
 ?>
