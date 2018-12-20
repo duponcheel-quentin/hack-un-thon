@@ -38,7 +38,7 @@ function getRoutes() {
     "userAdd" => [
       "admin",
       "showAddUser",
-      "status" => "admin"      
+      "status" => "admin"
     ],
     "userUpdate" => [
       "admin",
@@ -92,12 +92,12 @@ function getRoutes() {
     ],
     "categorieUpdate" => [
       "category",
-      "",
+      "showUpdateCategories",
       "status" => "admin"
     ],
     "categorieDelete" => [
       "category",
-      "",
+      "showDeleteCategories",
       "status" => "admin"
     ],
   ];
