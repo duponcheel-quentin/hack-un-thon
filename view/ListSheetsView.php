@@ -31,7 +31,7 @@ include "template/header.php";
       <th scope="col">Vendredi_aprèm</th>
     </tr>
   </thead>
-  <?php foreach ($sheet as $key => $value) {
+  <?php foreach ($sheets as $key => $sheet) {
 
   ?>
   <tbody>
@@ -54,7 +54,8 @@ include "template/header.php";
     </tr>
   </tbody>
 </table>
-}
+
 <?php
+}
 include "template/footer.php";
 ?>

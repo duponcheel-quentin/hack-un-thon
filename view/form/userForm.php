@@ -53,6 +53,5 @@
         </select>
     </div>
     <!--Envoie les données du formulaire selon si c'est un ajout ou une modification-->
-    <button type="submit" name="button" value="Envoyer" class="btn btn-primary">Envoyer</button>
-    <button type="submit" name="button" value="Modifier" class="btn btn-primary">Modifier</button>
+    <button type="submit" name="button" value="<?php echo $value; ?>" class="btn btn-primary"><?php echo $value; ?></button>
 </form>

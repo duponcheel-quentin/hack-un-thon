@@ -4,7 +4,6 @@ include "template/header.php";
 $users = getUsers();
 //C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 require "form/sortUsersForm.php";
-
 ?>
 
 <!--Ce sont les boutons ajouter, modifier et supprimer un utilisateur-->
