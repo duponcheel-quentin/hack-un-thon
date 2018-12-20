@@ -38,7 +38,7 @@ function getRoutes() {
     "userAdd" => [
       "admin",
       "showAddUser",
-      "status" => "admin"      
+      "status" => "admin"
     ],
     "userUpdate" => [
       "admin",
@@ -59,7 +59,7 @@ function getRoutes() {
       "status" => "teacher"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
-    "sheetsList" => [
+    "sheetList" => [
       "sheet",
       "showSheetByUser",
       "status" => "admin"

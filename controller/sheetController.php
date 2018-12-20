@@ -1,4 +1,4 @@
-<?php 
+<?php
 function showAddSheet(){
 // on verifie que les entrées de notre formulaire ne soient pas vides
 if(!empty($_POST)) {
@@ -8,7 +8,7 @@ if(!empty($_POST)) {
   }
 
   addSheet($_POST);
-    redirectTo("sheets/list");
+    redirectTo("sheet/list");
   }
 }
 
@@ -19,7 +19,7 @@ if(isset($_GET["sheet_id"])) {
 
   //On appelle la fonction de suppression de produit
   if(deleteSheet($id)) {
-    redirectTo("sheets/list");
+    redirectTo("sheet/list");
   }
 }
 }
@@ -33,7 +33,7 @@ if(!empty($_POST)) {
 
   //On appelle la fonction pour modifier les valeurs du produits
   if(updateSheet($_POST)) {
-    redirectTo("sheets/list");
+    redirectTo("sheet/list");
   }
 }
 }
