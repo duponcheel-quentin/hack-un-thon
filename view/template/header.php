@@ -13,12 +13,12 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="public/css/main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 <body>
-<a class="nav-link btn btn-danger w-25" href="user/logout">Deconnexion</a>
+<a class="nav-link btn btn-danger w-25" href="userLogout">Deconnexion</a>
   <img class="card-img-top w-25 container d-flex" src="public/img/adep-logo-cut.png" alt="Logo adep">
   <div class="card-body">
     <h2 class="card-text text-center">Bienvenu sur le site de l'Adep.</h2>
