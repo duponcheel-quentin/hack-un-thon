@@ -9,7 +9,7 @@ if(!empty($_POST)) {
   }
 
   addSheet($_POST);
-    redirectTo("sheets/list");
+    redirectTo("sheetsList");
   }
 }
 
@@ -20,7 +20,7 @@ if(isset($_GET["sheet_id"])) {
 
   //On appelle la fonction de suppression de produit
   if(deleteSheet($id)) {
-    redirectTo("sheets/list");
+    redirectTo("sheetsList");
   }
 }
 }
@@ -34,12 +34,12 @@ if(!empty($_POST)) {
 
   //On appelle la fonction pour modifier les valeurs du produits
   if(updateSheet($_POST)) {
-    redirectTo("sheets/list");
+    redirectTo("sheetsList");
   }
 }
 }
 function showSheetByUser(){
     $sheetByUser = getSheetByUser($_SESSION["user"]["user_id"]);
-    require "view/teacherView.php";
+    require "viewteacherView.php";
   }
 ?>
