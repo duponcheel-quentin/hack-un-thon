@@ -10,23 +10,32 @@ if(!empty($_POST) && $_POST["button"] === "Envoyer") {
     if($_POST["user_password"] === $_POST["user_password2"]) {
             addUser($_POST);
             //Fin du programme, je redirige avec un message
-            redirectTo("admin");
+            redirectTo("usersList");
         }
     }
     require "view/userAddView.php";
 }
 function showUpdateUser(){
     //~~~~~~~~~~~~~~~Modifie un utilisateur~~~~~~~~~~~~~~~
-if(!empty($_POST) || isset($_POST) && $_POST["button"] === "Modifier") {
-    //Je nettoie le form et sécurise les données
-    foreach($_POST as $key => $value) {
-    $_POST[$key] = htmlspecialchars($value);
+    if(isset($_GET["id"])) {
+        $id = htmlspecialchars($_GET["id"]);
+        $user = getUser($id);
     }
-      if(updateUser($_POST)) {
+    if(!empty($_POST) && $_POST["button"] === "Modifier") {
+        //Je nettoie le form et sécurise les données
+        foreach($_POST as $key => $value) {
+        $_POST[$key] = htmlspecialchars($value);
+        }
+        if(updateUser($_POST, $id)) {
         //Fin du programme, je redirige avec un message
-        redirectTo("admin");
+        redirectTo("usersList");
       }     
     }
+    require "view/userAddView.php";
+}
+function showDeleteUser() {
+    deleteUser($_GET["id"]);
+    redirectTo("usersList");
 }
 
 function showAdminView(){
@@ -34,5 +43,9 @@ function showAdminView(){
 }
 function showUsersList() {
   require "view/listUsersView.php";
+}
+function showUsersSort() {
+    sortUsers($_POST);
+    redirectTo("usersList");
 }
 ?>
