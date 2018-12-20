@@ -26,6 +26,5 @@ foreach($users as $key => $user) {
 </ul>
 <?php
 }
-var_dump($_POST);
 include "template/footer.php";
 ?>

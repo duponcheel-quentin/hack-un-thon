@@ -66,7 +66,7 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
     "sheetsList" => [
       "sheet",
-      "showSheets",
+      "showListSheets",
       "status" => "admin"
     ],
     "sheetAdd" => [
@@ -77,11 +77,13 @@ function getRoutes() {
     "sheetUpdate" => [
       "sheet",
       "showUpdateSheet",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
     "sheetDelete" => [
       "sheet",
       "showDeleteSheet",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~

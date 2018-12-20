@@ -1,5 +1,5 @@
 <?php
-function showListSheet(){
+function showListSheets(){
   $sheets = getAllSheets();
   require "view/listSheetsView.php";
 }
@@ -12,36 +12,38 @@ function showAddSheet(){
     foreach ($_POST as $key => $value) {
       $_POST[$key] = htmlspecialchars($value);
     }
-    if($_POST["button"] === "Ajouter") {
       addSheet($_POST);
       redirectTo("sheetsList");
-    }
   }
   require "view/sheetAddView.php";
 }
 
 function showUpdateSheet(){
   $value = "Modifier";
+  $id = htmlspecialchars($_GET["id"]);
+  $sheet = getSheet($id);
   if(!empty($_POST)) {
-    //On sécurise les entrées du formulaire et on transforme en integer ce qui doit l'être pour la DB
-    foreach ($_POST as $key => $value) {
-      $_POST[$key] = htmlspecialchars($value);
+    //Je nettoie le form et sécurise les données
+    foreach($_POST as $key => $value) {
+    $_POST[$key] = htmlspecialchars($value);
     }
-    if($_POST["button"] === "Modifier") {
-      updateSheet($_POST);
-      redirectTo("sheetsList");
-    }
+    updateSheet($_POST, $id);
+    redirectTo("sheetsList");
   }
   require "view/sheetAddView.php";
 }
 
 function showDeleteSheet(){
-  if(isset($_GET["sheet_id"])) {
+  if(isset($_GET["id"])) {
     //On récupère l'id du produit à supprimer
-    $id = intval(htmlspecialchars($_GET["sheet_id"]));
+    $id = htmlspecialchars($_GET["id"]);
     //On appelle la fonction de suppression de produit
-    if(deleteSheet($id)) {
-      redirectTo("sheetsList");
-    }
+    deleteSheet($id);
+    redirectTo("sheetsList");
   }
+}
+
+function showSheetByUser() {
+  $sheetByUser = hetSheetByUser($_SESSION["user"]["user_id"]);
+  require "view/teacherView.php";
 }
