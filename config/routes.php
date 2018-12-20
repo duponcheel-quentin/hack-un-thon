@@ -59,7 +59,7 @@ function getRoutes() {
       "status" => "teacher"
     ],
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
-    "sheetList" => [
+    "sheetsList" => [
       "sheet",
       "showSheetByUser",
       "status" => "admin"
