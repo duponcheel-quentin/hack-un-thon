@@ -54,7 +54,8 @@ include "template/header.php";
     </tr>
   </tbody>
 </table>
-}
+
 <?php
+}
 include "template/footer.php";
 ?>

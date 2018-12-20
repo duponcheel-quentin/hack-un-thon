@@ -1,5 +1,7 @@
 <?php
-function showListSheet(){}
+function showListSheet(){
+
+}
 function showAddSheet(){
 // on verifie que les entrées de notre formulaire ne soient pas vides
 if(!empty($_POST)) {
@@ -15,10 +17,10 @@ if(!empty($_POST)) {
 
 function showDeleteSheet(){
 if(isset($_GET["sheet_id"])) {
-  //On récupère l'id du produit à supprimer
+  //On récupère l'id de la feuille à supprimer
   $id = intval(htmlspecialchars($_GET["sheet_id"]));
 
-  //On appelle la fonction de suppression de produit
+  //On appelle la fonction de suppression d'une feuille
   if(deleteSheet($id)) {
     redirectTo("sheetsList");
   }
@@ -32,7 +34,7 @@ if(!empty($_POST)) {
     $_POST[$key] = htmlspecialchars($value);
   }
 
-  //On appelle la fonction pour modifier les valeurs du produits
+  //On appelle la fonction pour modifier les valeurs des feuilles
   if(updateSheet($_POST)) {
     redirectTo("sheetsList");
   }
