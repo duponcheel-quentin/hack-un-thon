@@ -4,7 +4,7 @@ function showAddUser(){
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
 //Je vérifie que le form contient quelque chose
 $value = "Ajouter";
-if(!empty($_POST) && $_POST["button"] === "Envoyer") {
+if(!empty($_POST) && $_POST["button"] === "AJOUTER") {
     //Je nettoie le form et sécurise les données
     foreach($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
@@ -60,5 +60,4 @@ function showUsersList() {
   require "view/listUsersView.php";
 }
     
-
 ?>
