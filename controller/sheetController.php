@@ -1,4 +1,9 @@
-<?php 
+<?php
+function showListSheet(){
+  $sheets = getAllSheets();
+  require "view/listSheetsView.php";
+}
+
 function showAddSheet(){
   $value = "Ajouter";
   // on verifie que les entrées de notre formulaire ne soient pas vides
@@ -11,7 +16,6 @@ function showAddSheet(){
       addSheet($_POST);
       redirectTo("sheetsList");
     }
-
   }
   require "view/sheetAddView.php";
 }
@@ -35,16 +39,9 @@ function showDeleteSheet(){
   if(isset($_GET["sheet_id"])) {
     //On récupère l'id du produit à supprimer
     $id = intval(htmlspecialchars($_GET["sheet_id"]));
-
     //On appelle la fonction de suppression de produit
     if(deleteSheet($id)) {
       redirectTo("sheetsList");
     }
   }
 }
-
-function showSheets(){
-  $sheet = getAllSheets();
-  require "view/listSheetsView.php";
-}
-?>

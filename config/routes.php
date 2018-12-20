@@ -38,7 +38,7 @@ function getRoutes() {
     "userAdd" => [
       "admin",
       "showAddUser",
-      "status" => "admin"      
+      "status" => "admin"
     ],
     "userUpdate" => [
       "admin",
