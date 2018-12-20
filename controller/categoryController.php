@@ -2,19 +2,21 @@
 
 function showListCategories() {
   getCategories();
+  var_dump($_POST);
   require "view/categoriesView.php";
 }
 
 function showAddCategories(){
-//Je vérifie que le form contient quelque chose
-if(!empty($_POST) || isset($_POST)) {
-//On sécurise les entrées du formulaire .
-foreach ($_POST as $key => $value) {
-        $_POST[$key] = htmlspecialchars($value);
-      }
-        addCategories($_POST);
-        redirectTo("categoriesList");
-}
+  //Je vérifie que le form contient quelque chose
+  if(!empty($_POST)) {
+  //On sécurise les entrées du formulaire .
+      foreach ($_POST as $key => $value) {
+          $_POST[$key] = htmlspecialchars($value);
+        }
+          addCategories($_POST);
+  }
+  redirectTo("categoriesList");
+
 }
 
 function showUpdateCategories()

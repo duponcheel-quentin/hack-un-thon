@@ -7,13 +7,13 @@ function getCategories() {
   return $categories;
 }
 
-function addCategories($category) {
+function addCategories($form) {
     $db = getDataBase();
     $query = $db->prepare("INSERT INTO categories(category_name) VALUES(:category_name)");
-    $query->execute([
-        "category_name" => $category["category_name"]
+    $result = $query->execute([
+        "category_name" => $form["category_name"]
     ]);
-    return $query;
+    return $result;
   }
 
 function updateCategories($category) {
