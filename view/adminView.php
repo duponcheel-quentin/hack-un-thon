@@ -13,7 +13,7 @@ include "template/header.php";
         <div class="card-body">
           <p class="card-text">Consulter les catégories.</p>
           <div class="d-flex justify-content-around">
-            <button type="button" href="categories/list" class="btn btn-light">Voir</button>
+            <a href="categoriesList"><button type="button" class="btn btn-light">Voir</button></a>
           </div>
         </div>
     </div>

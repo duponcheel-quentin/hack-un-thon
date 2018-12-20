@@ -1,9 +1,9 @@
 <?php
-function getCategories($id) {
+function getCategories() {
   $db = getDataBase();
-  $query = $db->prepare("SELECT * FROM categories WHERE category_id=?");
-  $query->execute([$id]);
+  $query = $db->query("SELECT * FROM categories");
   $categories = $query->fetchall(PDO::FETCH_ASSOC);
+  $query->closeCursor();
   return $categories;
 }
 
@@ -16,7 +16,7 @@ function addCategories($category) {
     return $query;
   }
 
-function updateUser($category) {
+function updateCategories($category) {
   $db = getDataBase();
   $query = $db->prepare("UPDATE categories SET category_name = :category_name WHERE category_id = :category_id");
   $result = $query->execute([

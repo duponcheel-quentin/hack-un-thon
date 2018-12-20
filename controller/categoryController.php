@@ -1,6 +1,9 @@
 <?php
 
-require "model/categoriesManagement.php";
+function showListCategories() {
+  getCategories();
+  require "view/categoriesView.php";
+}
 
 function showAddCategories(){
 //Je vérifie que le form contient quelque chose

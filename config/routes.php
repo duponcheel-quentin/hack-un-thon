@@ -87,7 +87,7 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
     "categoriesList" => [
       "category",
-      "",
+      "showListCategories",
       "status" => "admin"
     ],
     "categorieAdd" => [
