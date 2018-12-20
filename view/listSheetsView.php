@@ -17,8 +17,8 @@ include "template/header.php";
       <th scope="col">#</th>
       <th scope="col">Organisme</th>
       <th scope="col">Intitulé</th>
-      <th scope="col">Start</th>
-      <th scope="col">end</th>
+      <th scope="col">Début</th>
+      <th scope="col">Fin</th>
       <th scope="col">Lundi_matin</th>
       <th scope="col">Lundi_aprèm</th>
       <th scope="col">Mardi_matin</th>
@@ -31,7 +31,7 @@ include "template/header.php";
       <th scope="col">Vendredi_aprèm</th>
     </tr>
   </thead>
-  <?php foreach ($sheet as $key => $value) {
+  <?php foreach ($sheets as $key => $sheet) {
 
   ?>
   <tbody>

@@ -1,5 +1,5 @@
 <?php
-function showListSheet(){
+function showListSheets(){
 $sheets = getAllSheets();
 require "view/listSheetsView.php";
 }
@@ -25,24 +25,27 @@ if(isset($_GET["sheet_id"])) {
   if(deleteSheet($id)) {
     redirectTo("sheetsList");
   }
-}
+  require "view/sheetAddView.php";
 }
 
 function showUpdateSheet(){
-if(!empty($_POST)) {
-  //On sécurise les entrées du formulaire et on transforme en integer ce qui doit l'être pour la DB
-  foreach ($_POST as $key => $value) {
-    $_POST[$key] = htmlspecialchars($value);
+  $value = "Modifier";
+  if(!empty($_POST)) {
+    //On sécurise les entrées du formulaire et on transforme en integer ce qui doit l'être pour la DB
+    foreach ($_POST as $key => $value) {
+      $_POST[$key] = htmlspecialchars($value);
+    }
+    if($_POST["button"] === "Modifier") {
+      updateSheet($_POST);
+      redirectTo("sheetsList");
+    }
   }
-
-  //On appelle la fonction pour modifier les valeurs des feuilles
-  if(updateSheet($_POST)) {
-    redirectTo("sheetsList");
-  }
+  require "view/sheetAddView.php";
 }
 }
 function showSheetByUser(){
     $sheetByUser = getSheetByUser($_SESSION["user"]["user_id"]);
     require "view/teacherView.php";
   }
+
 ?>

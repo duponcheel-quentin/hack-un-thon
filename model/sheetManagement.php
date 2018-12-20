@@ -37,7 +37,7 @@ function addSheet($sheet) {
   return $result;
 }
 //Fonction qui update une sheet en DB
-function updatsheet($sheet) {
+function updateSheet($sheet) {
   $db = getDataBase();
   $query = $db->prepare("UPDATE sheet SET organization = :organization, entitled = :entitled, start = :start, end = :end, monday_morning = :monday_morning, monday_afternoon = :monday_afternoon, tuesday_morning = :tuesday_morning, tuesday_afternoon = :tuesday_afternoon, wednesday_morning = :wednesday_morning, wednesday_afternoon = :wednesday_afternoon, thursday_morning = :thursday_morning, thursday_afternoon = :thursday_afternoon, friday_morninng = :friday_morninng, friday_afternoon = :friday_afternoon)");
   $result = $query->execute([
@@ -60,7 +60,7 @@ function updatsheet($sheet) {
 }
 
 //Fonction pour supprimer une sheet en base de données
-function deletsheet($id) {
+function deleteSheet($id) {
   $db = getDataBase();
   $query = $db->prepare("DELETE FROM sheet WHERE sheet_id = ?");
   $result = $query->execute([$id]);
