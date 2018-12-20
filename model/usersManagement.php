@@ -95,4 +95,26 @@ function sortUsers($sortingKeys) {
     $query->closeCursor();
     return $result;
 }
+
+function sortUser($form){
+    $db = getDataBase();
+    $sql = "SELECT * FROM users ";
+    
+    if ($form["status"])
+    {
+        $sql .= "WHERE status = '" . $form['status']."'";
+                if ($form['order'])
+                    {
+                    $sql .= " ORDER BY " . $form["order"] ." ";
+                    }    
+                        if ($form["sort"] == "1")
+                        {
+                            $sql .= " ASC";
+                        }
+                            elseif ($form["sort"] == "0")
+                            {
+                                $sql .= " DESC";
+                            }
+    }
+}
 ?>

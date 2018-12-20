@@ -1,4 +1,5 @@
 <?php
+
 function showAddUser(){
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
 //Je vérifie que le form contient quelque chose
@@ -18,7 +19,10 @@ if(!empty($_POST) && $_POST["button"] === "Envoyer") {
 }
 function showUpdateUser(){
     //~~~~~~~~~~~~~~~Modifie un utilisateur~~~~~~~~~~~~~~~
-    $value = "Modifier";
+if(!empty($_POST) && $_POST["button"] === "Modifier") {
+    //Je nettoie le form et sécurise les données
+    foreach($_POST as $key => $value) {
+    $_POST[$key] = htmlspecialchars($value);
     if(isset($_GET["id"])) {
         $id = htmlspecialchars($_GET["id"]);
         $user = getUser($id);
@@ -35,6 +39,8 @@ function showUpdateUser(){
     }
     require "view/userAddView.php";
 }
+}
+}
 function showDeleteUser() {
     deleteUser($_GET["id"]);
     redirectTo("usersList");
@@ -44,10 +50,15 @@ function showAdminView(){
  require "view/adminView.php";
 }
 function showUsersList() {
+    if(!empty($_POST))
+    {
+    $users = sortUser($_POST);
+    }
+    else{
+    $users = getUsers();
+    }
   require "view/listUsersView.php";
 }
-function showUsersSort() {
-    sortUsers($_POST);
-    redirectTo("usersList");
-}
+    
+
 ?>

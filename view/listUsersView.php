@@ -2,8 +2,9 @@
 //J'appelle les pages nécessaires à cette page
 include "template/header.php";
 $users = getUsers();
-//C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 require "form/sortUsersForm.php";
+$sort = sortUser($_POST);
+//C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 ?>
 
 <!--Ce sont les boutons ajouter, modifier et supprimer un utilisateur-->
@@ -13,17 +14,18 @@ require "form/sortUsersForm.php";
 
 <?php
 foreach($users as $key => $user) {
+  
 ?>
 
 <!--C'est la liste des utilisateurs du site-->
 <ul class="list-group w-50 mx-auto my-2">
-  <li class="list-group-item"><?php echo $user["name"] . " " . $user["firstname"] . " " . "(" . $user["status"]. ")"; ?>
-  <a class="btn btn-primary btn-sm" href="userUpdate?id=<?php echo $user["user_id"]; ?>" role="button" name="button" value="Modifier">Modifier</a>
-  <a class="btn btn-danger btn-sm" href="userDelete?id=<?php echo $user["user_id"]; ?>" role="button" name="button" value="Supprimer">Supprimer</a>
+  <li class="list-group-item"><?php echo $user["name"] . " " . $user["firstname"]; ?>
+  <a class="btn btn-primary btn-sm" href="userUpdate?id=<?php echo $user["user_id"]?>" role="button" name="button" value="Modifier">Modifier</a>
+  <a class="btn btn-danger btn-sm" href="userDelete?id=<?php echo $user["user_id"]?>" role="button" name="button" value="Supprimer">Supprimer</a>
   </li>
 </ul>
 <?php
 }
-
+var_dump($_POST);
 include "template/footer.php";
 ?>
