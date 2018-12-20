@@ -2,9 +2,9 @@
 //J'appelle les pages nécessaires à cette page
 include "template/header.php";
 $users = getUsers();
-//C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 require "form/sortUsersForm.php";
-
+$sort = sortUser($_POST);
+//C'est le bouton dropdown qui permet de choisir la catégorie d'utilisateur
 ?>
 
 <!--Ce sont les boutons ajouter, modifier et supprimer un utilisateur-->
@@ -26,6 +26,6 @@ foreach($users as $key => $user) {
 </ul>
 <?php
 }
-
+var_dump($_POST);
 include "template/footer.php";
 ?>

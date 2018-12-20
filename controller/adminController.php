@@ -1,4 +1,5 @@
 <?php
+
 function showAddUser(){
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
 //Je vérifie que le form contient quelque chose
@@ -48,11 +49,15 @@ function showAdminView(){
  require "view/adminView.php";
 }
 function showUsersList() {
+    if(!empty($_POST))
+    {
+    $users = sortUser($_POST);
+    }
+    else{
+    $users = getUsers();
+    }
   require "view/listUsersView.php";
 }
-function showUsersSort() {
-    sortUsers($_POST);
-    redirectTo("usersList");
-}
+    
 
 ?>
