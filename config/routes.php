@@ -15,7 +15,7 @@ function getRoutes() {
     //route basique
     "" => [
       "user",
-      "userLogin",
+      "userLogin"
     ],
     //page principale des professeurs
     "teacher" => [
@@ -38,7 +38,7 @@ function getRoutes() {
     "userAdd" => [
       "admin",
       "showAddUser",
-      "status" => "admin"      
+      "status" => "admin"
     ],
     "userUpdate" => [
       "admin",
@@ -66,7 +66,7 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~SHEET~~~~~~~~~~~~~~~~~~~
     "sheetsList" => [
       "sheet",
-      "showSheetByUser",
+      "showSheets",
       "status" => "admin"
     ],
     "sheetAdd" => [
