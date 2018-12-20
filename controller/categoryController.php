@@ -13,7 +13,7 @@ foreach ($_POST as $key => $value) {
         $_POST[$key] = htmlspecialchars($value);
       }
         addCategories($_POST);
-        redirectTo("categories/list");
+        redirectTo("categoriesList");
 }
 }
 
