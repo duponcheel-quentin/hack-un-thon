@@ -100,11 +100,13 @@ function getRoutes() {
     "categoryUpdate" => [
       "category",
       "showUpdateCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
     "categoryDelete" => [
       "category",
       "showDeleteCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
   ];

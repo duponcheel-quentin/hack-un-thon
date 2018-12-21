@@ -1,4 +1,14 @@
 <?php
+function getCategory($id)
+{
+  $db = getDataBase();
+  $query = $db->prepare("SELECT * FROM categories WHERE category_id = ?");
+  $query->execute([$id]);
+  $category = $query->fetch(PDO::FETCH_ASSOC);
+  $query->closeCursor();
+  return $category;
+}
+
 function getCategories() {
   $db = getDataBase();
   $query = $db->query("SELECT * FROM categories");
@@ -16,12 +26,12 @@ function addCategories($form) {
     return $result;
   }
 
-function updateCategories($category) {
+function updateCategories($category, $id) {
   $db = getDataBase();
   $query = $db->prepare("UPDATE categories SET category_name = :category_name WHERE category_id = :category_id");
   $result = $query->execute([
     "category_name" => $category["category_name"],
-    "category_id" => $category["category_id"]
+    "category_id" => $id
   ]);
   $query->closeCursor();
   return $result;

@@ -21,8 +21,8 @@ $categories = getCategories();
       <th scope="row"><?php echo $category["category_id"] ?></th>
       <td><?php echo $category["category_name"] ?></td>
       <td>
-        <a href="categorieUpdate?id=<?php echo $category["category_id"]?>" class="btn btn-warning">Modifier</a>
-        <a href="categorieDelete?id=<?php echo $category["category_id"]?>" class="btn btn-danger">Supprimer</a>
+        <a href="categoryUpdate?id=<?php echo $category["category_id"]?>" class="btn btn-warning">Modifier</a>
+        <a href="categoryDelete?id=<?php echo $category["category_id"]?>" class="btn btn-danger">Supprimer</a>
       </td>
     </tr>
     <?php
