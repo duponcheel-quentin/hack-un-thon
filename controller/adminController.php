@@ -49,6 +49,9 @@ function showTeacherView()
 function showAdminView(){
     require "view/adminView.php";
 }
+function showTeacherView() {
+    require "view/teacherView.php";
+}
 function showUsersList() {
     if(!empty($_POST))
     {
