@@ -42,7 +42,7 @@ function showDeleteUser() {
 }
 
 function showAdminView(){
- require "view/adminView.php";
+    require "view/adminView.php";
 }
 function showUsersList() {
     if(!empty($_POST))
