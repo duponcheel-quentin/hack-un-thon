@@ -46,7 +46,6 @@ function addUser($user) {
     $request->closeCursor();   
     return $result;
 }
-//function that modifies the user
 function updateUser($user, $id) {
     $db = getDataBase();
     $request = $db->prepare("UPDATE users SET status = :status, name = :name, firstname = :firstname, password = :password, password_verif = :password_verif, mail = :mail, street = :street, city = :city, pc = :pc, id_pole_emploi = :id_pole_emploi, sex = :sex WHERE user_id = :user_id");
@@ -74,25 +73,6 @@ function deleteUser($id) {
     $request->execute([$id]);
     $result = $request->fetch(PDO::FETCH_ASSOC);
     $request->closeCursor();
-    return $result;
-}
-function sortUsers($sortingKeys) {
-    $db = getDataBase();
-    //On démarre la requête avec les paramètres qu'on exécutera stockés dans un tableau
-    $sql = "SELECT * FROM users";
-    $params = [];
-    if(isset($sortingKeys["status"]) || !empty($sortingKeys["status"])) {
-        $sql .= "WHERE status = ? ";
-        array_push($params, $sortingKeys["status"]);
-    }
-
-    //On ordonne le résultat quoiqu'il arrive
-    $sql .= "ORDER BY " . $sortingKeys['sort'];
-    //On réalise la requête de manière classique
-    $query = $db->prepare($sql);
-    $query->execute($params);
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
-    $query->closeCursor();
     return $result;
 }
 
