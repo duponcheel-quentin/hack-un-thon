@@ -31,7 +31,7 @@ if(!empty($_POST) && $_POST["button"] === "Modifier") {
         if(updateUser($_POST, $id)) {
         //Fin du programme, je redirige avec un message
         redirectTo("usersList");
-      }     
+      }
     }
     require "view/userAddView.php";
 }
@@ -54,5 +54,5 @@ function showUsersList() {
     }
   require "view/listUsersView.php";
 }
-    
+
 ?>
