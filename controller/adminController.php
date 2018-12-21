@@ -4,11 +4,7 @@ function showAddUser(){
 //~~~~~~~~~~~~~~~Ajoute un utilisateur~~~~~~~~~~~~~~~
 //Je vérifie que le form contient quelque chose
 $value = "Ajouter";
-<<<<<<< HEAD
-if(!empty($_POST) && $_POST["button"] === "AJOUTER") {
-=======
 if(!empty($_POST) && $_POST["button"] === "Ajouter") {
->>>>>>> d4752162a3e9c82f8f23cea63a1c99bfb1e11dec
     //Je nettoie le form et sécurise les données
     foreach($_POST as $key => $value) {
     $_POST[$key] = htmlspecialchars($value);
