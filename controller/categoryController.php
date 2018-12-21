@@ -2,8 +2,7 @@
 
 function showListCategories() {
   getCategories();
-  var_dump($_POST);
-  require "view/categoriesView.php";
+  require "view/listCategoriesView.php";
 }
 
 function showAddCategories(){
@@ -21,14 +20,20 @@ function showAddCategories(){
 
 function showUpdateCategories()
 {
+  $id = htmlspecialchars($_GET["id"]);
+  $category = getCategory($_GET["id"]);
   if(!empty($_POST)) {
-  updateCategories($_POST);
-  redirectTo("accueil");
+  if (updateCategories($_POST, $id)) {
+  redirectTo("categoriesList");
 }
-  $user = getUser($_GET["id"]);
-  if(empty($user)){
-  header("Location: ../accueil");
 }
-  require "view/modifyUserView.php";
+  require "view/modifyCategorieView.php";
+}
+
+function showDeleteCategories()
+{
+  if(deleteCategories($_GET["id"])) {
+    redirectTo("categoriesList");
+  }
 }
 ?>
