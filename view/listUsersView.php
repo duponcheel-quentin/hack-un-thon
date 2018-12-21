@@ -11,6 +11,12 @@ require "form/sortUsersForm.php";
 </div>
 
 
+<?php
+foreach($users as $key => $user) {
+
+?>
+
+
 <!--C'est la liste des utilisateurs du site-->
 <div class="card-deck m-0 d-flex  text-white">
 <table class="table table-dark bg_tableau">
