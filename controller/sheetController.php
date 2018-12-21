@@ -20,6 +20,7 @@ function showAddSheet(){
 
 function showUpdateSheet(){
   $value = "Modifier";
+  //$modayMorning = (isset($_POST['monday_morning']) ? $_POST['monday_morning']: false);
   $id = htmlspecialchars($_GET["id"]);
   $sheet = getSheet($id);
   if(!empty($_POST)) {
