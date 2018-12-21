@@ -2,7 +2,6 @@
 
 function showListCategories() {
   getCategories();
-  var_dump($_POST);
   require "view/categoriesView.php";
 }
 
