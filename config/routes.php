@@ -19,8 +19,8 @@ function getRoutes() {
     ],
     //page principale des professeurs
     "teacher" => [
-      "sheet",
-      "showSheetByUser",
+      "admin",
+      "showTeacherView",
       "status" => "teacher"
     ],
     //page principale des admins

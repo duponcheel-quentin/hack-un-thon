@@ -11,6 +11,12 @@ require "form/sortUsersForm.php";
 </div>
 
 
+<?php
+foreach($users as $key => $user) {
+
+?>
+
+
 <!--C'est la liste des utilisateurs du site-->
 <div class="card-deck m-0 text-center text-white">
 <table class="table table-dark bg_tableau">
@@ -47,5 +53,6 @@ require "form/sortUsersForm.php";
   </table>
 </div>
 <?php
+}
 include "template/footer.php";
 ?>
