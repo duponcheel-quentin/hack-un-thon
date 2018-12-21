@@ -41,6 +41,11 @@ function showDeleteUser() {
     redirectTo("usersList");
 }
 
+function showTeacherView()
+{
+  require "view/teacherView.php";
+}
+
 function showAdminView(){
     require "view/adminView.php";
 }
