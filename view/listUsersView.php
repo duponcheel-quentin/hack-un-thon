@@ -13,7 +13,7 @@ require "form/sortUsersForm.php";
 
 <?php
 foreach($users as $key => $user) {
-  
+
 ?>
 
 <!--C'est la liste des utilisateurs du site-->
