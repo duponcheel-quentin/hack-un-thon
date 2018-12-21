@@ -54,7 +54,7 @@ function getRoutes() {
     ],
     "usersSort" => [
       "admin",
-      "showUsersSort",
+      "showUsersList",
       "status" => "admin"
     ],
     //La deconnexion
