@@ -89,22 +89,24 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
     "categoriesList" => [
       "category",
-      "",
+      "showListCategories",
       "status" => "admin"
     ],
-    "categorieAdd" => [
+    "categoryAdd" => [
       "category",
       "showAddCategories",
       "status" => "admin"
     ],
-    "categorieUpdate" => [
+    "categoryUpdate" => [
       "category",
-      "",
+      "showUpdateCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "categorieDelete" => [
+    "categoryDelete" => [
       "category",
-      "",
+      "showDeleteCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
   ];
