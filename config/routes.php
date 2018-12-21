@@ -19,7 +19,7 @@ function getRoutes() {
     ],
     //page principale des professeurs
     "teacher" => [
-      "admin",
+      "sheet",
       "showSheetByUser",
       "status" => "teacher"
     ],
@@ -54,7 +54,7 @@ function getRoutes() {
     ],
     "usersSort" => [
       "admin",
-      "showUsersSort",
+      "showUsersList",
       "status" => "admin"
     ],
     //La deconnexion
@@ -100,11 +100,13 @@ function getRoutes() {
     "categoryUpdate" => [
       "category",
       "showUpdateCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
     "categoryDelete" => [
       "category",
       "showDeleteCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
   ];
