@@ -54,5 +54,5 @@ function showUsersList() {
     }
   require "view/listUsersView.php";
 }
-    
+
 ?>
