@@ -121,7 +121,7 @@ section {
 form{
     /* Uniquement centrer le formulaire sur la page */
     margin: 0 auto;
-    width: 400px;
+    width: 50%;
      /* Encadré pour voir les limites du formulaire */
     padding: 1em;
     border: 1px solid #dc9e82;
