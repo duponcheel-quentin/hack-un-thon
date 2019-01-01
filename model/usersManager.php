@@ -27,15 +27,14 @@ function getUserByName($userName) {
 }
 //function that adds the user
 function addUser($user) {
-    var_dump($user);
     $db = getDataBase();
-    $request = $db->prepare("INSERT INTO users (status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex) VALUES(:status, :name, :firstname, :password, :password_verif, :mail, :street, :city, :pc, :id_pole_emploi, :sex)");
-    $result = $request->execute([
+    $request = $db->prepare("INSERT INTO users (status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex) VALUES(status, name, firstname, password, password_verif, mail, street, city, pc, id_pole_emploi, sex)");
+    $request->execute([
         "status" => $user["user_status"] ,
         "name" => $user["user_name"],
         "firstname" => $user["user_firstname"],
-        "password" =>  password_hash($user["user_password"], PASSWORD_BCRYPT, ['cost' => 13]),
-        "password_verif" => password_hash($user["user_password2"], PASSWORD_BCRYPT, ['cost' => 13]),
+        "password" => $user["user_password"],
+        "password_verif" => $user["user_password2"],
         "mail" => $user["user_mail"],
         "street" => $user["user_street"],
         "city" => $user["user_city"],
@@ -43,13 +42,15 @@ function addUser($user) {
         "id_pole_emploi" => $user["user_jobID"],
         "sex" => $user["user_sexe"]
     ]); 
+    $result = $request->fetchall(PDO::FETCH_ASSOC);
     $request->closeCursor();   
     return $result;
 }
+//function that modifies the user
 function updateUser($user, $id) {
     $db = getDataBase();
     $request = $db->prepare("UPDATE users SET status = :status, name = :name, firstname = :firstname, password = :password, password_verif = :password_verif, mail = :mail, street = :street, city = :city, pc = :pc, id_pole_emploi = :id_pole_emploi, sex = :sex WHERE user_id = :user_id");
-    $result = $request->execute([
+    $request->execute([
         "status" => $user["user_status"] ,
         "name" => $user["user_name"],
         "firstname" => $user["user_firstname"],
@@ -63,6 +64,7 @@ function updateUser($user, $id) {
         "sex" => $user["user_sexe"],
         "user_id" => $id
     ]);
+    $result = $request->fetchall(PDO::FETCH_ASSOC);
     $request->closeCursor();
     return $result;
 }
@@ -75,31 +77,3 @@ function deleteUser($id) {
     $request->closeCursor();
     return $result;
 }
-
-function sortUser($form){
-    $db = getDataBase();
-    $sql = "SELECT * FROM users ";
-    
-    if ($form["status"])
-    {
-        $sql .= "WHERE status = '" . $form['status']."'";
-                if ($form['order'])
-                    {
-                    $sql .= " ORDER BY " . $form["order"] ." ";
-                    }    
-                        if ($form["sort"] == "1")
-                        {
-                            $sql .= " ASC";
-                        }
-                            elseif ($form["sort"] == "0")
-                            {
-                                $sql .= " DESC";
-                            }
-    }
-    var_dump ($sql) ;
-    $query = $db->query($sql);
-    $result = $query->fetchall(PDO::FETCH_ASSOC);
-    $query->closeCursor();
-    return $result;
-}
-?>

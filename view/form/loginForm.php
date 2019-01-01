@@ -1,6 +1,6 @@
 <form method="post">
     <div class="container text-light">
-      <label class ="container text-center" for="name">Nom</label>
+      <label class="container text-center" for="name">Nom</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Entrer votre nom">
     </div>
     <div class="form-group container text-light">
@@ -10,4 +10,4 @@
     <div class="d-flex justify-content-center">
       <button type="submit" class="btn btn-primary">CONNEXION</button>
     </div>
-</form>
+  </form>

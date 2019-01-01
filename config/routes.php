@@ -20,7 +20,7 @@ function getRoutes() {
     //page principale des professeurs
     "teacher" => [
       "admin",
-      "showSheetByUser",
+      "showTeacherView",
       "status" => "teacher"
     ],
     //page principale des admins
@@ -54,7 +54,7 @@ function getRoutes() {
     ],
     "usersSort" => [
       "admin",
-      "showUsersSort",
+      "showUsersList",
       "status" => "admin"
     ],
     //La deconnexion
@@ -89,22 +89,24 @@ function getRoutes() {
     //~~~~~~~~~~~~~~~~~~~~~~~~CATEGORY~~~~~~~~~~~~~~~~~~~
     "categoriesList" => [
       "category",
-      "",
+      "showListCategories",
       "status" => "admin"
     ],
-    "categorieAdd" => [
+    "categoryAdd" => [
       "category",
       "showAddCategories",
       "status" => "admin"
     ],
-    "categorieUpdate" => [
+    "categoryUpdate" => [
       "category",
-      "",
+      "showUpdateCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
-    "categorieDelete" => [
+    "categoryDelete" => [
       "category",
-      "",
+      "showDeleteCategories",
+      ["id" => ["integer"]],
       "status" => "admin"
     ],
   ];

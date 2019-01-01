@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<a class="nav-link btn btn-danger p-0" style="width:3em" href="userLogout"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+<a class="nav-link btn btn-danger" href="userLogout">Deconnectez-vous</a>
 
   <img class="card-img-top w-25 container d-flex" src="public/img/adep-logo-cut.png" alt="Logo adep">
   <div class="card-body">
