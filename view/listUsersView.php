@@ -6,8 +6,8 @@ require "form/sortUsersForm.php";
 ?>
 
 <!--Ce sont les boutons ajouter, modifier et supprimer un utilisateur-->
-<div class="w-50 mx-auto mt-5 d-flex justify-content-center">
-  <a class="btn btn-success" href="userAdd" role="button">Ajouter</a>
+<div class="w-50 mx-auto mt-5 d-flex justify-content-center black">
+  <a class="btn btn-black" href="userAdd" role="button">Ajouter</a>
 </div>
 
 
