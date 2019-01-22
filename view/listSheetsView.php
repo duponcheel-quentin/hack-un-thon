@@ -18,6 +18,8 @@ include "template/header.php";
       <th scope="col">#</th>
       <th scope="col">Organisme</th>
       <th scope="col">Intitulé</th>
+      <th scope="col">Début</th>
+      <th scope="col">Fin</th>
       <th scope="col">Start</th>
       <th scope="col">end</th>
       <th scope="col">Lundi_matin</th>
@@ -30,14 +32,14 @@ include "template/header.php";
       <th scope="col">Jeudi_aprèm</th>
       <th scope="col">Vendredi_matin</th>
       <th scope="col">Vendredi_aprèm</th>
-      <th></th>
     </tr>
   </thead>
   <?php foreach ($sheets as $key => $sheet) {
+
   ?>
   <tbody>
     <tr>
-      <th scope="row"><?php echo $sheet["sheet_id"]; ?></th>
+      <th scope="row"></th>
       <td><?php echo $sheet["organization"]; ?></td>
       <td><?php echo $sheet["entitled"]; ?></td>
       <td><?php echo $sheet["start"]; ?></td>
@@ -50,6 +52,8 @@ include "template/header.php";
       <td><?php echo $sheet["wednesday_afternoon"]; ?></td>
       <td><?php echo $sheet["thursday_morning"]; ?></td>
       <td><?php echo $sheet["thursday_afternoon"]; ?></td>
+      <td><?php echo $sheet["wednesday_morning"]; ?></td>
+      <td><?php echo $sheet["wednesday_afternoon"]; ?></td>
       <td><?php echo $sheet["friday_morning"]; ?></td>
       <td><?php echo $sheet["friday_afternoon"]; ?></td>
       <td>
