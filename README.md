@@ -6,3 +6,4 @@ Projet de groupe qui consiste à créer une application qui doit répondre àdes
 	
 		-HTML/CSS
 		-PHP
+    -MVC
